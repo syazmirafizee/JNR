@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JNR Capital Empire | Property Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="text-decoration: none; cursor: pointer; display: flex; align-items: center;">
+                <img src="jutaniaga-capital.png" alt="JNR Capital Empire Logo" style="height: 60px; width: auto; object-fit: contain;">
+            </a>
+            <nav style="display: flex; align-items: center;">
+                <ul class="nav-links" style="display: flex; align-items: center;">
+                    <li><a href="about.html" data-en="About Us" data-ms="Tentang Kami">About Us</a></li>
+                    <li><a href="services.html" data-en="Services" data-ms="Perkhidmatan">Services</a></li>
+                    <li><a href="portfolio.html" data-en="Portfolio" data-ms="Portfolio">Portfolio</a></li>
+                    <li><a href="index jnl.html" class="text-link" data-en="Property Management" data-ms="Pengurusan Hartanah">Property Management</a></li>
+                    <li><a href="#contact" class="btn-primary" data-en="Book Consultation" data-ms="Tempah Konsultasi">Book Consultation</a></li>
+                </ul>
+                <button id="lang-toggle" class="btn-secondary" style="margin-left: 20px; padding: 0.4rem 0.8rem; font-size: 0.9rem; color: var(--primary-blue); border-color: var(--primary-blue);">BM</button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="background: linear-gradient(rgba(39, 34, 100, 0.8), rgba(39, 34, 100, 0.8)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="container hero-content" style="text-align: center; width: 100%;">
+            <h1 data-en="Find Your Dream Home Today" data-ms="Cari Rumah Idaman Anda Hari Ini">Find Your Dream Home Today</h1>
+            <p data-en="Explore exclusive projects and affordable housing across Malaysia." data-ms="Terokai projek eksklusif dan perumahan mampu milik di seluruh Malaysia.">Explore exclusive projects and affordable housing across Malaysia.</p>
+            
+            <div class="search-box">
+                <select>
+                    <option value="" data-en="Location (All States)" data-ms="Lokasi (Semua Negeri)">Location (All States)</option>
+                    <option value="johor">Johor</option>
+                    <option value="kedah">Kedah</option>
+                    <option value="kelantan">Kelantan</option>
+                    <option value="negeri-sembilan">Negeri Sembilan</option>
+                    <option value="perak">Perak</option>
+                    <option value="sabah">Sabah</option>
+                    <option value="selangor">Selangor</option>
+                    <option value="terengganu">Terengganu</option>
+                    <option value="kuala-lumpur">W.P. Kuala Lumpur</option>
+                </select>
+                
+                <select>
+                    <option value="" data-en="Property Type" data-ms="Jenis Hartanah">Property Type</option>
+                    <option value="terrace">Terrace</option>
+                    <option value="semi-d">Semi-D</option>
+                    <option value="bungalow">Bungalow</option>
+                    <option value="high-rise">High-Rise</option>
+                </select>
+                
+                <select>
+                    <option value="" data-en="Budget" data-ms="Bajet">Budget</option>
+                    <option value="100k-199k">RM 100,000 - RM 199,999</option>
+                    <option value="200k-299k">RM 200,000 - RM 299,999</option>
+                    <option value="300k-399k">RM 300,000 - RM 399,999</option>
+                    <option value="400k-plus">RM 400,000+</option>
+                </select>
+                
+                <button class="btn-primary" data-en="Search" data-ms="Cari">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="listings" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title" data-en="Latest Property Listings" data-ms="Senarai Hartanah Terkini">Latest Property Listings</h2>
+            <div class="portfolio-grid">
+                
+                <div class="portfolio-card" style="background: white;">
+                    <div style="height: 220px; background: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; position: relative;">
+                        <span style="position: absolute; top: 15px; left: 15px; background: var(--secondary-red); color: white; padding: 5px 10px; font-weight: bold; border-radius: 4px; font-size: 0.8rem;">New Project</span>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <div style="font-size: 1.5rem; color: var(--primary-blue); font-weight: bold; margin-bottom: 0.5rem;">From RM 250,000</div>
+                        <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.5rem;">Prima Residensi (Teres Setingkat)</h3>
+                        <p style="color: #777; font-size: 0.9rem; margin-bottom: 1rem;">📍 Sitiawan, Perak</p>
+                        <div style="display: flex; gap: 15px; border-top: 1px solid #eee; padding-top: 1rem; font-size: 0.9rem; color: var(--primary-blue); font-weight: 500;">
+                            <span>🛏️ 3 Beds</span>
+                            <span>🛁 2 Baths</span>
+                            <span>📐 1,200 sqft</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card" style="background: white;">
+                    <div style="height: 220px; background: url('https://images.unsplash.com/photo-1605276374104-aa237f7cecd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; position: relative;">
+                        <span style="position: absolute; top: 15px; left: 15px; background: var(--primary-blue); color: white; padding: 5px 10px; font-weight: bold; border-radius: 4px; font-size: 0.8rem;">Hot Selling</span>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <div style="font-size: 1.5rem; color: var(--primary-blue); font-weight: bold; margin-bottom: 0.5rem;">From RM 320,000</div>
+                        <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.5rem;">Taman Tropika Semi-D</h3>
+                        <p style="color: #777; font-size: 0.9rem; margin-bottom: 1rem;">📍 Tapah, Perak</p>
+                        <div style="display: flex; gap: 15px; border-top: 1px solid #eee; padding-top: 1rem; font-size: 0.9rem; color: var(--primary-blue); font-weight: 500;">
+                            <span>🛏️ 4 Beds</span>
+                            <span>🛁 3 Baths</span>
+                            <span>📐 2,800 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" style="background: white;">
+                    <div style="height: 220px; background: url('https://images.unsplash.com/photo-1613490900233-141c5560d75d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; position: relative;">
+                        <span style="position: absolute; top: 15px; left: 15px; background: var(--secondary-red); color: white; padding: 5px 10px; font-weight: bold; border-radius: 4px; font-size: 0.8rem;">Completed</span>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <div style="font-size: 1.5rem; color: var(--primary-blue); font-weight: bold; margin-bottom: 0.5rem;">From RM 450,000</div>
+                        <h3 style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.5rem;">Puncak Wangsa Bangalow</h3>
+                        <p style="color: #777; font-size: 0.9rem; margin-bottom: 1rem;">📍 Kota Bharu, Kelantan</p>
+                        <div style="display: flex; gap: 15px; border-top: 1px solid #eee; padding-top: 1rem; font-size: 0.9rem; color: var(--primary-blue); font-weight: 500;">
+                            <span>🛏️ 4 Beds</span>
+                            <span>🛁 4 Baths</span>
+                            <span>📐 4,000 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h4>JNR Capital Empire</h4>
+                <p>No 54 (Atas), Jalan Jati Permai, Taman Jati Permai, 32000 Sitiawan, Perak</p>
+                <p>Email: azmilsani@gmail.com</p>
+                <p>Phone: 011-2640 8803</p>
+            </div>
+            <div class="footer-form">
+                <h4 data-en="Book a Consultation" data-ms="Tempah Konsultasi">Book a Consultation</h4>
+                <form id="consultation-form" action="#" method="POST">
+                    <input type="text" name="name" placeholder="Full Name" data-placeholder-en="Full Name" data-placeholder-ms="Nama Penuh" required>
+                    <input type="email" name="email" placeholder="Email Address" data-placeholder-en="Email Address" data-placeholder-ms="Alamat E-mel" required>
+                    <textarea name="message" placeholder="How can we help you?" data-placeholder-en="How can we help you?" data-placeholder-ms="Bagaimana kami boleh bantu anda?" rows="4" required></textarea>
+                    <button type="submit" class="btn-primary" data-en="Submit Enquiry" data-ms="Hantar Pertanyaan">Submit Enquiry</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-en="&copy; 2026 JNR Capital Empire. All rights reserved." data-ms="&copy; 2026 JNR Capital Empire. Hak cipta terpelihara.">&copy; 2026 JNR Capital Empire. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const langToggle = document.getElementById('lang-toggle');
+            let currentLang = localStorage.getItem('siteLang') || 'en';
+
+            const updateLanguage = (lang) => {
+                if(langToggle) langToggle.innerText = lang === 'en' ? 'BM' : 'EN';
+                document.querySelectorAll('[data-en][data-ms]').forEach(elem => {
+                    elem.innerHTML = elem.getAttribute(`data-${lang}`);
+                });
+                document.querySelectorAll('[data-placeholder-en]').forEach(elem => {
+                    elem.placeholder = elem.getAttribute(`data-placeholder-${lang}`);
+                });
+            };
+
+            updateLanguage(currentLang);
+
+            if(langToggle) {
+                langToggle.addEventListener('click', () => {
+                    currentLang = currentLang === 'en' ? 'ms' : 'en';
+                    localStorage.setItem('siteLang', currentLang);
+                    updateLanguage(currentLang);
+                });
+            }
+
+            const form = document.getElementById('consultation-form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault(); 
+                    const formData = new FormData(this);
+                    const data = Object.fromEntries(formData);
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    
+                    submitBtn.innerText = currentLang === 'en' ? 'Sending...' : 'Menghantar...';
+                    submitBtn.disabled = true;
+
+                    fetch('https://your-api-endpoint.com/submit', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify(data)
+                    }).then(response => {
+                        const successMsg = currentLang === 'en' ? 'Thank you! Our consultants will contact you shortly.' : 'Terima kasih! Perunding kami akan menghubungi anda sebentar lagi.';
+                        this.innerHTML = `<h4 style="color: var(--text-light); margin-top: 1rem;">${successMsg}</h4>`;
+                    }).catch(error => {
+                        submitBtn.innerText = currentLang === 'en' ? 'Error. Try Again.' : 'Ralat. Cuba Lagi.';
+                        submitBtn.disabled = false;
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
