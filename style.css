@@ -6,8 +6,8 @@
 }
 
 :root {
-    /* Set to your exact theme color. I've used the gold from the screenshot as a placeholder */
-    --theme-color: #b38b4d; 
+    /* Updated to the vibrant red from the JNR Capital logo */
+    --theme-color: #e60000; 
     --text-light: #ffffff;
     --overlay-bg: rgba(0, 0, 0, 0.45);
 }
@@ -21,7 +21,7 @@ body {
 .hero-section {
     /* Add your preferred background image URL here */
     background: linear-gradient(var(--overlay-bg), var(--overlay-bg)), url('your-background-image.jpg') center/cover no-repeat;
-    background-color: #333; /* Fallback color */
+    background-color: #1a1a1a; /* Darker fallback color */
     height: 100vh;
     min-height: 800px;
     width: 100%;
@@ -42,22 +42,29 @@ body {
 .nav-left, .nav-right {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 35px;
     flex: 1;
+}
+
+/* Align left links to the right, and right links to the left to bring them closer to center logo */
+.nav-left {
+    justify-content: flex-end;
+    padding-right: 20px;
 }
 
 .nav-right {
-    justify-content: flex-end;
+    justify-content: flex-start;
+    padding-left: 20px;
 }
 
 .nav-center {
-    flex: 1;
+    flex: 0 0 auto;
     display: flex;
     justify-content: center;
 }
 
 .brand-logo {
-    max-height: 55px; /* Adjust this to make the logo fit perfectly */
+    max-height: 55px; 
     width: auto;
 }
 
@@ -72,18 +79,6 @@ body {
 .custom-navbar a:hover, 
 .custom-navbar a.active {
     color: var(--theme-color);
-}
-
-.nav-phone {
-    font-weight: 700 !important;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.fa-chevron-down {
-    font-size: 10px;
-    margin-left: 4px;
 }
 
 /* --- Hero Content --- */
@@ -185,7 +180,7 @@ body {
 }
 
 .search-btn:hover {
-    background-color: #9c7840; /* Slightly darker shade on hover */
+    background-color: #cc0000; /* Slightly darker red on hover */
 }
 
 /* --- Stats Bar --- */
@@ -219,6 +214,7 @@ body {
     .nav-left, .nav-right {
         justify-content: center;
         flex-wrap: wrap;
+        padding: 0;
     }
     .hero-title {
         font-size: 3.5rem;
