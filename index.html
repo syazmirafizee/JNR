@@ -1,72 +1,98 @@
-<!-- Hero Section -->
-<section class="hero-section">
-  <!-- Navigation -->
-  <nav class="custom-navbar">
-    <!-- Left Navigation -->
-    <div class="nav-left">
-      <a href="#" class="active">Home</a>
-      <a href="#">Demos</a>
-      <a href="#">Properties <i class="fas fa-chevron-down"></i></a>
-      <a href="#">About <i class="fas fa-chevron-down"></i></a>
-      <a href="#">Blog <i class="fas fa-chevron-down"></i></a>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juta Niaga Capital</title>
+    
+    <!-- Google Fonts: Inter (Base), Playfair Display (Heading), Great Vibes (Cursive accent) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons (Search, phone, chevrons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to your stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- Center Logo -->
-    <div class="nav-center">
-      <!-- Retaining your original logo -->
-      <img src="jutaniaga-capital.png" alt="Juta Niaga Capital Logo" class="brand-logo">
-    </div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        
+        <!-- Navigation -->
+        <nav class="custom-navbar">
+            <!-- Left Navigation -->
+            <div class="nav-left">
+                <a href="#" class="active">Home</a>
+                <a href="#">Demos</a>
+                <a href="#">Properties <i class="fas fa-chevron-down"></i></a>
+                <a href="#">About <i class="fas fa-chevron-down"></i></a>
+                <a href="#">Blog <i class="fas fa-chevron-down"></i></a>
+            </div>
 
-    <!-- Right Navigation -->
-    <div class="nav-right">
-      <a href="#">Contact</a>
-      <a href="#">Home Valuation</a>
-      <a href="#" class="nav-phone"><i class="fas fa-phone-alt"></i> +1 206-741-0340</a>
-    </div>
-  </nav>
+            <!-- Center Logo -->
+            <div class="nav-center">
+                <!-- Using your original logo file -->
+                <img src="jutaniaga-capital.png" alt="Juta Niaga Capital Logo" class="brand-logo">
+            </div>
 
-  <!-- Hero Content -->
-  <div class="hero-content">
-    <h1 class="hero-title">
-      The Finest Napa's<br>Real Estate Properties
-      <span class="cursive-accent">explore</span>
-    </h1>
+            <!-- Right Navigation -->
+            <div class="nav-right">
+                <a href="#">Contact</a>
+                <a href="#">Home Valuation</a>
+                <a href="#" class="nav-phone"><i class="fas fa-phone-alt"></i> +1 206-741-0340</a>
+            </div>
+        </nav>
 
-    <!-- Search Bar -->
-    <div class="search-container">
-      <form class="search-form">
-        <div class="input-group">
-          <input type="text" placeholder="Search by location" aria-label="Search by location">
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1 class="hero-title">
+                The Finest Napa's<br>Real Estate Properties
+                <span class="cursive-accent">explore</span>
+            </h1>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <form class="search-form">
+                    <div class="input-group">
+                        <input type="text" placeholder="Search by location" aria-label="Search by location">
+                    </div>
+                    
+                    <div class="input-group divider">
+                        <select aria-label="Property Type">
+                            <option value="" disabled selected>Property Type</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="condo">Condo</option>
+                            <option value="land">Land</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group divider">
+                        <select aria-label="Sell or Rent">
+                            <option value="" disabled selected>Sell or Rent</option>
+                            <option value="sell">For Sale</option>
+                            <option value="rent">For Rent</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i> SEARCH
+                    </button>
+                </form>
+            </div>
+
+            <!-- Statistics / Trust Bar -->
+            <div class="hero-stats">
+                <span><span class="dot">&bull;</span> 7,000+ SOLD HOMES</span>
+                <span><span class="dot">&bull;</span> 1 BILLION $ IN SALES</span>
+                <span><span class="dot">&bull;</span> 1,000+ SATISFIED CUSTOMERS</span>
+            </div>
         </div>
         
-        <div class="input-group divider">
-          <select aria-label="Property Type">
-            <option value="" disabled selected>Property Type</option>
-            <option value="house">House</option>
-            <option value="apartment">Apartment</option>
-            <option value="condo">Condo</option>
-          </select>
-        </div>
+    </section>
 
-        <div class="input-group divider">
-          <select aria-label="Sell or Rent">
-            <option value="" disabled selected>Sell or Rent</option>
-            <option value="sell">For Sale</option>
-            <option value="rent">For Rent</option>
-          </select>
-        </div>
-
-        <button type="submit" class="search-btn">
-          <i class="fas fa-search"></i> SEARCH
-        </button>
-      </form>
-    </div>
-
-    <!-- Statistics / Trust Bar -->
-    <div class="hero-stats">
-      <span><span class="dot">&bull;</span> 7,000+ SOLD HOMES</span>
-      <span><span class="dot">&bull;</span> 1 BILLION $ IN SALES</span>
-      <span><span class="dot">&bull;</span> 1,000+ SATISFIED CUSTOMERS</span>
-    </div>
-  </div>
-</section>
+</body>
+</html>
