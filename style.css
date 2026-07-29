@@ -6,10 +6,12 @@
 }
 
 :root {
-    /* Updated to the vibrant red from the JNR Capital logo */
-    --theme-color: #e60000; 
+    /* Deep crimson red matching the buttons in your reference image */
+    --theme-color: #9e1b1d; 
+    --theme-color-hover: #801416;
     --text-light: #ffffff;
-    --overlay-bg: rgba(0, 0, 0, 0.45);
+    /* Rich indigo-blue overlay matching the reference hero image */
+    --overlay-bg: rgba(38, 43, 108, 0.82);
 }
 
 body {
@@ -19,9 +21,9 @@ body {
 
 /* --- Hero Section --- */
 .hero-section {
-    /* Add your preferred background image URL here */
+    /* Uses the deep indigo-navy blue overlay over the background image */
     background: linear-gradient(var(--overlay-bg), var(--overlay-bg)), url('your-background-image.jpg') center/cover no-repeat;
-    background-color: #1a1a1a; /* Darker fallback color */
+    background-color: #1e224f; /* Fallback deep navy color */
     height: 100vh;
     min-height: 800px;
     width: 100%;
@@ -46,7 +48,6 @@ body {
     flex: 1;
 }
 
-/* Align left links to the right, and right links to the left to bring them closer to center logo */
 .nav-left {
     justify-content: flex-end;
     padding-right: 20px;
@@ -180,7 +181,7 @@ body {
 }
 
 .search-btn:hover {
-    background-color: #cc0000; /* Slightly darker red on hover */
+    background-color: var(--theme-color-hover);
 }
 
 /* --- Stats Bar --- */
