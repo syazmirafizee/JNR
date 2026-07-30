@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JNR Capital - Property Listings</title>
+    <title>JNR Capital - Real Estate Properties</title>
     
     <!-- Google Fonts: Inter (Base), Playfair Display (Heading), Great Vibes (Cursive accent) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,10 +53,10 @@
 
             <!-- Search Bar -->
             <div class="search-container">
-                <form class="search-form">
+                <form class="search-form" id="searchForm">
                     <div class="input-group">
-                        <select aria-label="Location (All States)">
-                            <option value="" disabled selected>Location (All States)</option>
+                        <select id="filterLocation" aria-label="Location (All States)">
+                            <option value="all" selected>Location (All States)</option>
                             <option value="kuala-lumpur">Kuala Lumpur</option>
                             <option value="selangor">Selangor</option>
                             <option value="johor">Johor</option>
@@ -71,8 +71,8 @@
                     </div>
                     
                     <div class="input-group divider">
-                        <select aria-label="Property Type">
-                            <option value="" disabled selected>Property Type</option>
+                        <select id="filterType" aria-label="Property Type">
+                            <option value="all" selected>Property Type (All)</option>
                             <option value="house">House</option>
                             <option value="apartment">Apartment</option>
                             <option value="condo">Condo</option>
@@ -81,8 +81,8 @@
                     </div>
 
                     <div class="input-group divider">
-                        <select aria-label="Sell or Rent">
-                            <option value="" disabled selected>Sell or Rent</option>
+                        <select id="filterStatus" aria-label="Sell or Rent">
+                            <option value="all" selected>Sell or Rent (All)</option>
                             <option value="sell">For Sale</option>
                             <option value="rent">For Rent</option>
                         </select>
@@ -104,7 +104,7 @@
         
     </section>
 
-    <!-- Featured Properties Section (Add your properties here later) -->
+    <!-- Featured Properties Section -->
     <section class="properties-section" id="properties">
         <div class="section-header">
             <span class="section-subtitle">EXCLUSIVE OPPORTUNITIES</span>
@@ -112,19 +112,41 @@
             <p class="section-desc">Explore our hand-picked selection of luxury residences and investment properties across Malaysia.</p>
         </div>
 
-        <div class="properties-grid">
+        <div class="properties-grid" id="propertiesGrid">
             
-            <!-- Property Card 1 (Template - Duplicate this block for more properties) -->
-            <div class="property-card">
+            <!-- Property Card 1: Taman Karisma, Lekir Perak -->
+            <div class="property-card" data-state="perak" data-type="house" data-status="sell">
+                <div class="property-image">
+                    <img src="photo_2026-07-30_15-37-46.jpg" alt="Taman Karisma Lekir Perak">
+                    <span class="property-badge sale">For Sale</span>
+                    <span class="property-price">RM 325,000</span>
+                </div>
+                <div class="property-info">
+                    <span class="property-type">Single-Storey Semi-D &bull; Freehold (Malay Reserve)</span>
+                    <h3 class="property-title"><a href="#">Taman Karisma, Lekir Perak</a></h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Lekir, Perak (4 mins to WCE Highway)</p>
+                    <p class="property-summary">New project of 26 Semi-D units. FREE Booking Fee &amp; RM90k Rebate! Expected completion End 2026.</p>
+                    <div class="property-specs">
+                        <span><i class="fas fa-bed"></i> 4 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 1,125 sqft</span>
+                    </div>
+                    <a href="https://maps.app.goo.gl/qefpQXXXRvDC8tUS8?g_st=ac" target="_blank" class="property-btn">View Details &amp; Map <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Property Card 2: Damansara Heights -->
+            <div class="property-card" data-state="kuala-lumpur" data-type="house" data-status="sell">
                 <div class="property-image">
                     <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Luxury Villa Kuala Lumpur">
                     <span class="property-badge sale">For Sale</span>
                     <span class="property-price">RM 2,850,000</span>
                 </div>
                 <div class="property-info">
-                    <span class="property-type">Bungalow / Villa</span>
+                    <span class="property-type">Bungalow / Villa &bull; Freehold</span>
                     <h3 class="property-title"><a href="#">Damansara Heights Luxury Villa</a></h3>
                     <p class="property-location"><i class="fas fa-map-marker-alt"></i> Damansara Heights, Kuala Lumpur</p>
+                    <p class="property-summary">Prestigious neighborhood with private pool, landscaped gardens, and smart home automation features.</p>
                     <div class="property-specs">
                         <span><i class="fas fa-bed"></i> 5 Beds</span>
                         <span><i class="fas fa-bath"></i> 6 Baths</span>
@@ -134,8 +156,8 @@
                 </div>
             </div>
 
-            <!-- Property Card 2 -->
-            <div class="property-card">
+            <!-- Property Card 3: KLCC Penthouse -->
+            <div class="property-card" data-state="kuala-lumpur" data-type="condo" data-status="rent">
                 <div class="property-image">
                     <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="KLCC Penthouse">
                     <span class="property-badge rent">For Rent</span>
@@ -145,6 +167,7 @@
                     <span class="property-type">Luxury Condominium</span>
                     <h3 class="property-title"><a href="#">KLCC Skyline Executive Condo</a></h3>
                     <p class="property-location"><i class="fas fa-map-marker-alt"></i> KLCC, Kuala Lumpur</p>
+                    <p class="property-summary">High-floor luxury residence with direct walkway to Suria KLCC and breathtaking Petronas Twin Towers view.</p>
                     <div class="property-specs">
                         <span><i class="fas fa-bed"></i> 3 Beds</span>
                         <span><i class="fas fa-bath"></i> 3 Baths</span>
@@ -154,17 +177,18 @@
                 </div>
             </div>
 
-            <!-- Property Card 3 -->
-            <div class="property-card">
+            <!-- Property Card 4: Mont Kiara -->
+            <div class="property-card" data-state="kuala-lumpur" data-type="house" data-status="sell">
                 <div class="property-image">
                     <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Mont Kiara Villa">
                     <span class="property-badge sale">For Sale</span>
                     <span class="property-price">RM 3,400,000</span>
                 </div>
                 <div class="property-info">
-                    <span class="property-type">Semi-Detached House</span>
+                    <span class="property-type">Semi-Detached House &bull; Freehold</span>
                     <h3 class="property-title"><a href="#">Mont Kiara Premium Residence</a></h3>
                     <p class="property-location"><i class="fas fa-map-marker-alt"></i> Mont Kiara, Kuala Lumpur</p>
+                    <p class="property-summary">Gated and guarded community surrounded by international schools, lifestyle hubs, and greenery.</p>
                     <div class="property-specs">
                         <span><i class="fas fa-bed"></i> 4 Beds</span>
                         <span><i class="fas fa-bath"></i> 5 Baths</span>
@@ -175,7 +199,59 @@
             </div>
 
         </div>
+
+        <!-- No Results Message (Hidden by default) -->
+        <div id="noResults" class="no-results" style="display: none;">
+            <i class="fas fa-home"></i>
+            <h3>No Properties Found</h3>
+            <p>We couldn't find any properties matching your search filters. Try selecting "All" or choosing another location.</p>
+        </div>
     </section>
+
+    <!-- Interactive Search Filtering Script -->
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form reload
+            filterProperties();
+            
+            // Smooth scroll down to properties section
+            document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        function filterProperties() {
+            const selectedLocation = document.getElementById('filterLocation').value;
+            const selectedType = document.getElementById('filterType').value;
+            const selectedStatus = document.getElementById('filterStatus').value;
+
+            const cards = document.querySelectorAll('.property-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cardState = card.getAttribute('data-state');
+                const cardType = card.getAttribute('data-type');
+                const cardStatus = card.getAttribute('data-status');
+
+                const matchLocation = (selectedLocation === 'all' || cardState === selectedLocation);
+                const matchType = (selectedType === 'all' || cardType === selectedType);
+                const matchStatus = (selectedStatus === 'all' || cardStatus === selectedStatus);
+
+                if (matchLocation && matchType && matchStatus) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show or hide "No Results" message
+            const noResultsMsg = document.getElementById('noResults');
+            if (visibleCount === 0) {
+                noResultsMsg.style.display = 'block';
+            } else {
+                noResultsMsg.style.display = 'none';
+            }
+        }
+    </script>
 
 </body>
 </html>
