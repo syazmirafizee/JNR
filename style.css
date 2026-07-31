@@ -312,6 +312,10 @@ body {
     background-color: #1e224f;
 }
 
+.property-badge.sold {
+    background-color: #4a4a4a; /* Dark charcoal grey for Sold Out */
+}
+
 .property-price {
     position: absolute;
     bottom: 15px;
@@ -413,6 +417,15 @@ body {
 
 .property-btn:hover {
     color: var(--theme-color);
+}
+
+.property-btn.sold-btn {
+    color: #888888;
+    cursor: not-allowed;
+}
+
+.property-btn.sold-btn:hover {
+    color: #888888;
 }
 
 /* --- No Results Message Styling --- */
