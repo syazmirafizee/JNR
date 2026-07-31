@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JNR Capital - Real Estate Properties</title>
+    <title>JNR Capital - Affordable Real Estate Properties</title>
     
     <!-- Google Fonts: Inter (Base), Playfair Display (Heading), Great Vibes (Cursive accent) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,37 +18,37 @@
 </head>
 <body>
 
+    <!-- White Navigation Bar -->
+    <nav class="custom-navbar">
+        <!-- Left Navigation -->
+        <div class="nav-left">
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+        </div>
+
+        <!-- Center Logo -->
+        <div class="nav-center">
+            <a href="index.html">
+                <img src="jutaniaga-capital.png" alt="JNR Capital Logo" class="brand-logo">
+            </a>
+        </div>
+
+        <!-- Right Navigation -->
+        <div class="nav-right">
+            <a href="portfolio.html">Portfolio</a>
+            <a href="insights.html">Insights</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero-section">
         
-        <!-- Navigation -->
-        <nav class="custom-navbar">
-            <!-- Left Navigation -->
-            <div class="nav-left">
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-            </div>
-
-            <!-- Center Logo -->
-            <div class="nav-center">
-                <a href="index.html">
-                    <img src="jutaniaga-capital.png" alt="JNR Capital Logo" class="brand-logo">
-                </a>
-            </div>
-
-            <!-- Right Navigation -->
-            <div class="nav-right">
-                <a href="portfolio.html">Portfolio</a>
-                <a href="insights.html">Insights</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-
         <!-- Hero Content -->
         <div class="hero-content">
             <h1 class="hero-title">
-                The Finest Napa's<br>Real Estate Properties
-                <span class="cursive-accent">explore</span>
+                Find Your Affordable<br>Dream Home Today
+                <span class="cursive-accent">in Malaysia</span>
             </h1>
 
             <!-- Search Bar -->
@@ -63,7 +63,6 @@
                             <option value="kedah">Kedah</option>
                             <option value="kelantan">Kelantan</option>
                             <option value="negeri-sembilan">Negeri Sembilan</option>
-                            <option value="penang">Penang</option>
                             <option value="perak">Perak</option>
                             <option value="sabah">Sabah</option>
                             <option value="terengganu">Terengganu</option>
@@ -77,6 +76,16 @@
                             <option value="apartment">Apartment</option>
                             <option value="condo">Condo</option>
                             <option value="land">Land</option>
+                        </select>
+                    </div>
+
+                    <!-- New Budget Dropdown -->
+                    <div class="input-group divider">
+                        <select id="filterBudget" aria-label="Budget">
+                            <option value="all" selected>Budget (All)</option>
+                            <option value="under250k">Below RM 250,000</option>
+                            <option value="250k-300k">RM 250,000 – RM 300,000</option>
+                            <option value="above300k">Above RM 300,000</option>
                         </select>
                     </div>
 
@@ -94,11 +103,11 @@
                 </form>
             </div>
 
-            <!-- Statistics / Trust Bar -->
+            <!-- Statistics / Trust Bar in Malaysian RM -->
             <div class="hero-stats">
-                <span><span class="dot">&bull;</span> 7,000+ SOLD HOMES</span>
-                <span><span class="dot">&bull;</span> 1 BILLION $ IN SALES</span>
-                <span><span class="dot">&bull;</span> 1,000+ SATISFIED CUSTOMERS</span>
+                <span><span class="dot">&bull;</span> 500+ AFFORDABLE HOMES</span>
+                <span><span class="dot">&bull;</span> RM 150 MILLION+ IN SALES</span>
+                <span><span class="dot">&bull;</span> 1,000+ SATISFIED MALAYSIANS</span>
             </div>
         </div>
         
@@ -109,13 +118,13 @@
         <div class="section-header">
             <span class="section-subtitle">EXCLUSIVE OPPORTUNITIES</span>
             <h2 class="section-title">Featured Real Estate Properties</h2>
-            <p class="section-desc">Explore our hand-picked selection of luxury residences and investment properties across Malaysia.</p>
+            <p class="section-desc">Explore our hand-picked selection of affordable housing and investment properties across Malaysia.</p>
         </div>
 
         <div class="properties-grid" id="propertiesGrid">
             
             <!-- Property Card 1: Taman Karisma, Lekir Perak -->
-            <div class="property-card" data-state="perak" data-type="house" data-status="sell">
+            <div class="property-card" data-state="perak" data-type="house" data-status="sell" data-price="325000">
                 <div class="property-image">
                     <img src="photo_2026-07-30_15-37-46.jpg" alt="Taman Karisma Lekir Perak">
                     <span class="property-badge sale">For Sale</span>
@@ -136,7 +145,7 @@
             </div>
 
             <!-- Property Card 2: Taman Lekir Sutera Phase 1, Perak -->
-            <div class="property-card" data-state="perak" data-type="house" data-status="sell">
+            <div class="property-card" data-state="perak" data-type="house" data-status="sell" data-price="267000">
                 <div class="property-image">
                     <img src="photo_2026-07-30_15-57-49.jpg" alt="Taman Lekir Sutera Phase 1 Perak">
                     <span class="property-badge sale">For Sale</span>
@@ -157,7 +166,7 @@
             </div>
 
             <!-- Property Card 3: Jertih Terrace Project, Terengganu -->
-            <div class="property-card" data-state="terengganu" data-type="house" data-status="sell">
+            <div class="property-card" data-state="terengganu" data-type="house" data-status="sell" data-price="259900">
                 <div class="property-image">
                     <img src="photo_2026-07-30_16-21-27.jpg" alt="Jertih Single-Storey Terrace Terengganu">
                     <span class="property-badge sale">For Sale</span>
@@ -178,7 +187,7 @@
             </div>
 
             <!-- Property Card 4: Taman Bunga Mas, Pasir Mas, Kelantan -->
-            <div class="property-card" data-state="kelantan" data-type="house" data-status="sell">
+            <div class="property-card" data-state="kelantan" data-type="house" data-status="sell" data-price="228000">
                 <div class="property-image">
                     <img src="photo_2026-07-31_12-07-29.jpg" alt="Taman Bunga Mas Pasir Mas Kelantan">
                     <span class="property-badge sale">For Sale</span>
@@ -199,7 +208,7 @@
             </div>
 
             <!-- Property Card 5: Lyra @ La Lumiere, Kulai, Johor -->
-            <div class="property-card" data-state="johor" data-type="house" data-status="sell">
+            <div class="property-card" data-state="johor" data-type="house" data-status="sell" data-price="320000">
                 <div class="property-image">
                     <img src="photo_2026-07-31_12-32-43.jpg" alt="Lyra @ La Lumiere Kulai Johor">
                     <span class="property-badge sale">For Sale</span>
@@ -220,7 +229,7 @@
             </div>
 
             <!-- Property Card 6: Taman Nilam, Chengkau Rembau, Negeri Sembilan -->
-            <div class="property-card" data-state="negeri-sembilan" data-type="house" data-status="sell">
+            <div class="property-card" data-state="negeri-sembilan" data-type="house" data-status="sell" data-price="319000">
                 <div class="property-image">
                     <img src="photo_2026-07-31_14-56-38.jpg" alt="Taman Nilam Chengkau Rembau Negeri Sembilan">
                     <span class="property-badge sale">For Sale</span>
@@ -241,7 +250,7 @@
             </div>
 
             <!-- Property Card 7: Lagenda Ardea, Bernam Jaya, Selangor -->
-            <div class="property-card" data-state="selangor" data-type="house" data-status="sell">
+            <div class="property-card" data-state="selangor" data-type="house" data-status="sell" data-price="257300">
                 <div class="property-image">
                     <img src="image_6932b1.jpg" alt="Lagenda Ardea Bernam Jaya Selangor">
                     <span class="property-badge sale">For Sale</span>
@@ -262,7 +271,7 @@
             </div>
 
             <!-- Property Card 8: Lagenda Mersing, Johor -->
-            <div class="property-card" data-state="johor" data-type="house" data-status="sell">
+            <div class="property-card" data-state="johor" data-type="house" data-status="sell" data-price="233000">
                 <div class="property-image">
                     <img src="photo_2026-07-31_15-22-37.jpg" alt="Lagenda Mersing Johor">
                     <span class="property-badge sale">For Sale</span>
@@ -283,7 +292,7 @@
             </div>
 
             <!-- Property Card 9: Damar Residence, Kinarut, Sabah -->
-            <div class="property-card" data-state="sabah" data-type="condo" data-status="sell">
+            <div class="property-card" data-state="sabah" data-type="condo" data-status="sell" data-price="300000">
                 <div class="property-image">
                     <img src="photo_2026-07-31_15-41-30.jpg" alt="Damar Residence Kinarut Sabah">
                     <span class="property-badge sale">For Sale</span>
@@ -304,7 +313,7 @@
             </div>
 
             <!-- Property Card 10: Taman Bunga Tanjung, Mahang, Kulim, Kedah (SOLD OUT) -->
-            <div class="property-card" data-state="kedah" data-type="house" data-status="sell">
+            <div class="property-card" data-state="kedah" data-type="house" data-status="sell" data-price="230900">
                 <div class="property-image">
                     <img src="photo_2026-07-31_15-51-54.jpg" alt="Taman Bunga Tanjung Mahang Kulim Kedah">
                     <span class="property-badge sold">Sold Out</span>
@@ -325,7 +334,7 @@
             </div>
 
             <!-- Property Card 11: Apartment Flora Hijauan, Gombak KL (SOLD OUT) -->
-            <div class="property-card" data-state="kuala-lumpur" data-type="apartment" data-status="sell">
+            <div class="property-card" data-state="kuala-lumpur" data-type="apartment" data-status="sell" data-price="319900">
                 <div class="property-image">
                     <img src="Residensi flora hijauan is new condo in taman melati Gombak.jpg" alt="Apartment Flora Hijauan Gombak KL">
                     <span class="property-badge sold">Sold Out</span>
@@ -351,7 +360,7 @@
         <div id="noResults" class="no-results" style="display: none;">
             <i class="fas fa-home"></i>
             <h3>No Properties Found</h3>
-            <p>We couldn't find any properties matching your search filters. Try selecting "All" or choosing another location.</p>
+            <p>We couldn't find any properties matching your search filters. Try selecting "All" or choosing another filter.</p>
         </div>
     </section>
 
@@ -368,6 +377,7 @@
         function filterProperties() {
             const selectedLocation = document.getElementById('filterLocation').value;
             const selectedType = document.getElementById('filterType').value;
+            const selectedBudget = document.getElementById('filterBudget').value;
             const selectedStatus = document.getElementById('filterStatus').value;
 
             const cards = document.querySelectorAll('.property-card');
@@ -377,12 +387,23 @@
                 const cardState = card.getAttribute('data-state');
                 const cardType = card.getAttribute('data-type');
                 const cardStatus = card.getAttribute('data-status');
+                const cardPrice = parseInt(card.getAttribute('data-price'), 10) || 0;
 
                 const matchLocation = (selectedLocation === 'all' || cardState === selectedLocation);
                 const matchType = (selectedType === 'all' || cardType === selectedType);
                 const matchStatus = (selectedStatus === 'all' || cardStatus === selectedStatus);
 
-                if (matchLocation && matchType && matchStatus) {
+                // Check budget condition
+                let matchBudget = true;
+                if (selectedBudget === 'under250k') {
+                    matchBudget = cardPrice < 250000;
+                } else if (selectedBudget === '250k-300k') {
+                    matchBudget = cardPrice >= 250000 && cardPrice <= 300000;
+                } else if (selectedBudget === 'above300k') {
+                    matchBudget = cardPrice > 300000;
+                }
+
+                if (matchLocation && matchType && matchBudget && matchStatus) {
                     card.style.display = 'flex';
                     visibleCount++;
                 } else {
