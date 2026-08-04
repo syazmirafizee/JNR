@@ -60,7 +60,8 @@ body {
 }
 
 .brand-logo {
-    max-height: 55px; 
+    /* Increased logo size from 55px to 75px */
+    max-height: 75px; 
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -86,7 +87,7 @@ body {
 .hero-section {
     background: linear-gradient(var(--overlay-bg), var(--overlay-bg)), url('your-background-image.jpg') center/cover no-repeat;
     background-color: #1e224f; /* Fallback deep navy color */
-    height: calc(100vh - 95px); /* Compensate for navbar height */
+    height: calc(100vh - 115px); /* Compensate for taller navbar height */
     min-height: 750px;
     width: 100%;
     display: flex;
