@@ -6,13 +6,11 @@
 }
 
 :root {
-    /* Deep crimson red matching the buttons in your reference image */
     --theme-color: #9e1b1d; 
     --theme-color-hover: #801416;
     --text-light: #ffffff;
     --text-dark: #1a1a1a;
     --text-muted: #666666;
-    /* Rich indigo-blue overlay matching the reference hero image */
     --overlay-bg: rgba(38, 43, 108, 0.82);
 }
 
@@ -461,20 +459,20 @@ body {
 }
 
 .detail-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .detail-location {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--text-muted);
     margin-bottom: 20px;
 }
 
 .detail-price {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: var(--text-dark);
 }
@@ -591,21 +589,6 @@ body {
     text-align: center;
 }
 
-.btn-outline-small {
-    border: 1px solid var(--text-dark);
-    background: transparent;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-outline-small:hover {
-    background: #f4f4f4;
-}
-
 .about-tagline {
     font-weight: 600;
     color: var(--text-muted);
@@ -625,7 +608,7 @@ body {
 .detail-sidebar {
     width: 360px;
     position: sticky;
-    top: 120px; /* Sticks just below the navbar */
+    top: 120px;
 }
 
 .sidebar-top-actions {
@@ -635,7 +618,7 @@ body {
     margin-bottom: 20px;
 }
 
-.btn-outline-pill, .btn-icon-circle {
+.btn-outline-pill {
     border: 1px solid #dddddd;
     background: #ffffff;
     border-radius: 50px;
@@ -646,20 +629,10 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-.btn-outline-pill {
     padding: 10px 20px;
 }
 
-.btn-icon-circle {
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.btn-outline-pill:hover, .btn-icon-circle:hover {
+.btn-outline-pill:hover {
     background: #f4f4f4;
 }
 
@@ -766,7 +739,7 @@ body {
     text-decoration: underline;
 }
 
-/* --- Responsive Adjustments --- */
+/* --- Responsive Adjustments (Tablets & Mobile) --- */
 @media (max-width: 1024px) {
     .custom-navbar {
         flex-direction: column;
