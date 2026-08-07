@@ -1,13 +1,13 @@
 /* =========================================
-   GLOBAL VARIABLES & RESET
+   JNR CAPITAL - GLOBAL VARIABLES & RESET
 ========================================= */
 :root {
-  --primary-navy: #0A2540;
-  --accent-gold: #CBA052;
+  --jnr-blue: #1A2954; /* JNR Capital Navy */
+  --jnr-red: #D12027;  /* JNR Capital Red */
+  --bg-light: #F8F9FA;
   --text-dark: #333333;
-  --text-light: #777777;
-  --bg-main: #FFFFFF;
-  --bg-alt: #F8F9FA;
+  --text-muted: #666666;
+  --white: #FFFFFF;
   --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --transition: all 0.3s ease;
 }
@@ -21,7 +21,7 @@
 body {
   font-family: var(--font-main);
   color: var(--text-dark);
-  background-color: var(--bg-main);
+  background-color: var(--bg-light);
   line-height: 1.6;
 }
 
@@ -31,50 +31,142 @@ img {
 }
 
 /* =========================================
-   HEADER & LOGO (Applied to all pages)
+   MAIN HEADER & NAVIGATION
 ========================================= */
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
-  background-color: var(--bg-main);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 15px 5%;
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.logo-container img {
-  height: 50px; /* Adjust based on your latest logo proportions */
-  object-fit: contain;
-}
-
-.main-nav ul {
-  list-style: none;
+.main-header nav {
   display: flex;
-  gap: 30px;
+  gap: 25px;
+  align-items: center;
 }
 
-.main-nav a {
+.main-header nav a {
   text-decoration: none;
-  color: var(--primary-navy);
+  color: var(--text-dark);
   font-weight: 600;
   font-size: 1rem;
   transition: var(--transition);
 }
 
-.main-nav a:hover,
-.main-nav a.active {
-  color: var(--accent-gold);
+.main-header nav a:hover {
+  color: var(--jnr-red);
+}
+
+.logo-container img {
+  height: 60px; /* Sizing the JNR Capital logo properly */
+  object-fit: contain;
 }
 
 /* =========================================
-   PAGE HERO SECTIONS
+   HOMEPAGE HERO & SEARCH BAR
+========================================= */
+.hero-section {
+  padding: 80px 5%;
+  background: var(--white);
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  color: var(--jnr-blue);
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.hero-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: var(--bg-light);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 25px;
+}
+
+.hero-search-form select {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.hero-search-form button {
+  background-color: var(--jnr-red);
+  color: var(--white);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.hero-search-form button:hover {
+  background-color: #a8191f;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================
+   HOMEPAGE FEATURED SECTION
+========================================= */
+.featured-section {
+  padding: 80px 5%;
+  background-color: var(--bg-light);
+}
+
+.section-heading {
+  margin-bottom: 40px;
+}
+
+.section-heading .subtitle {
+  color: var(--jnr-red);
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.section-heading h2 {
+  font-size: 2.2rem;
+  color: var(--jnr-blue);
+  margin: 10px 0;
+}
+
+.section-heading p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* =========================================
+   SUBPAGE SHARED LAYOUTS
 ========================================= */
 .page-hero {
-  background-color: var(--primary-navy);
-  color: var(--bg-main);
+  background-color: var(--jnr-blue);
+  color: var(--white);
   padding: 80px 5%;
   text-align: center;
 }
@@ -86,216 +178,54 @@ img {
 
 .page-hero p {
   font-size: 1.2rem;
-  color: #d1d5db;
+  color: #e0e0e0;
   max-width: 700px;
   margin: 0 auto;
 }
 
-/* =========================================
-   ABOUT PAGE (.about.html)
-========================================= */
+/* About Section */
 .about-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
   padding: 80px 5%;
   align-items: center;
+  background: var(--white);
 }
 
-.about-text {
-  flex: 1;
-  min-width: 300px;
-}
+.about-text { flex: 1; min-width: 300px; }
+.about-text h2 { color: var(--jnr-blue); margin-bottom: 20px; }
+.about-text p { color: var(--text-muted); margin-bottom: 15px; }
+.about-visual { flex: 1; min-width: 300px; }
+.about-visual img { border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
-.about-text h2 {
-  font-size: 2.2rem;
-  color: var(--primary-navy);
-  margin-bottom: 20px;
-}
-
-.about-text p {
-  color: var(--text-light);
-  margin-bottom: 15px;
-  font-size: 1.05rem;
-}
-
-.about-visual {
-  flex: 1;
-  min-width: 300px;
-}
-
-.about-visual img {
-  border-radius: 12px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-}
-
-/* =========================================
-   SERVICES PAGE (.services.html)
-========================================= */
-.services-wrapper {
-  padding: 80px 5%;
-  background-color: var(--bg-alt);
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
+/* Services Section */
+.services-wrapper { padding: 80px 5%; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 .service-item {
-  background-color: var(--bg-main);
+  background: var(--white);
   padding: 40px 30px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   border-bottom: 4px solid transparent;
   transition: var(--transition);
 }
+.service-item:hover { border-bottom: 4px solid var(--jnr-red); transform: translateY(-5px); }
+.service-item h3 { color: var(--jnr-blue); margin-bottom: 15px; }
 
-.service-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-  border-bottom: 4px solid var(--accent-gold);
-}
+/* Portfolio Section */
+.portfolio-wrapper { padding: 80px 5%; background: var(--white); }
+.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 25px; }
+.portfolio-card { position: relative; border-radius: 8px; overflow: hidden; }
+.portfolio-card img { width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease; }
+.portfolio-card:hover img { transform: scale(1.05); }
 
-.service-item h3 {
-  font-size: 1.4rem;
-  color: var(--primary-navy);
-  margin-bottom: 15px;
-}
-
-.service-item p {
-  color: var(--text-light);
-}
-
-/* =========================================
-   PORTFOLIO PAGE (.portfolio.html)
-========================================= */
-.portfolio-wrapper {
-  padding: 80px 5%;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 25px;
-}
-
-.portfolio-card {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.portfolio-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.6s ease;
-}
-
-.portfolio-info {
-  position: absolute;
-  inset: 0;
-  background: rgba(10, 37, 64, 0.9); /* primary-navy with opacity */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: var(--transition);
-}
-
-.portfolio-info h3 {
-  color: var(--bg-main);
-  font-size: 1.5rem;
-  transform: translateY(20px);
-  transition: transform 0.4s ease;
-}
-
-.portfolio-card:hover img {
-  transform: scale(1.08);
-}
-
-.portfolio-card:hover .portfolio-info {
-  opacity: 1;
-}
-
-.portfolio-card:hover .portfolio-info h3 {
-  transform: translateY(0);
-}
-
-/* =========================================
-   INSIGHTS PAGE (.insights.html)
-========================================= */
-.insights-wrapper {
-  padding: 80px 5%;
-  background-color: var(--bg-alt);
-}
-
-.insights-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
-}
-
-.insight-card {
-  background-color: var(--bg-main);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.04);
-  transition: var(--transition);
-}
-
-.insight-card:hover {
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-.insight-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.insight-text {
-  padding: 30px;
-}
-
-.insight-meta {
-  font-size: 0.85rem;
-  color: var(--accent-gold);
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  display: block;
-}
-
-.insight-text h3 {
-  font-size: 1.3rem;
-  color: var(--primary-navy);
-  margin-bottom: 15px;
-}
-
-.insight-text p {
-  color: var(--text-light);
-  margin-bottom: 20px;
-}
-
-.btn-read-more {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--primary-navy);
-  font-weight: 600;
-  border-bottom: 2px solid var(--accent-gold);
-  padding-bottom: 2px;
-  transition: var(--transition);
-}
-
-.btn-read-more:hover {
-  color: var(--accent-gold);
-}
+/* Insights Section */
+.insights-wrapper { padding: 80px 5%; }
+.insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+.insight-card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.insight-card img { width: 100%; height: 220px; object-fit: cover; }
+.insight-text { padding: 30px; }
+.insight-meta { color: var(--jnr-red); font-size: 0.85rem; font-weight: bold; margin-bottom: 10px; display: block; }
+.insight-text h3 { color: var(--jnr-blue); margin-bottom: 15px; }
+.btn-read-more { color: var(--jnr-blue); text-decoration: none; font-weight: bold; border-bottom: 2px solid var(--jnr-red); }
