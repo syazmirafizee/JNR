@@ -45,8 +45,8 @@ img {
    NAVIGATION BAR (.custom-navbar)
 ========================================= */
 .custom-navbar {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: 15px 5%;
   background-color: var(--white);
@@ -56,10 +56,16 @@ img {
   z-index: 1000;
 }
 
-.nav-left, .nav-right {
+.nav-left {
   display: flex;
-  gap: 40px;
-  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
 .custom-navbar a {
@@ -67,11 +73,13 @@ img {
   color: var(--text-dark);
   font-weight: 600;
   font-size: 1.05rem;
-  transition: var(--transition);
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block; /* Required for transform scale to work properly */
 }
 
 .custom-navbar a:hover, .custom-navbar a.active {
   color: var(--jnr-red);
+  transform: scale(1.1); /* Enlarges the link on hover */
 }
 
 .nav-center .brand-logo {
@@ -337,6 +345,7 @@ img {
   text-decoration: none;
   color: var(--jnr-blue);
   transition: var(--transition);
+  display: inline-block;
 }
 
 .property-title a:hover { color: var(--jnr-red); }
@@ -465,7 +474,7 @@ img {
 .insight-meta { color: var(--jnr-red); font-size: 0.85rem; font-weight: bold; margin-bottom: 10px; display: block; text-transform: uppercase; }
 .insight-text h3 { font-family: var(--font-heading); font-size: 1.4rem; color: var(--jnr-blue); margin-bottom: 15px; }
 .insight-text p { color: var(--text-muted); margin-bottom: 20px; }
-.btn-read-more { color: var(--jnr-blue); text-decoration: none; font-weight: 600; border-bottom: 2px solid var(--jnr-red); padding-bottom: 2px; transition: var(--transition); }
+.btn-read-more { color: var(--jnr-blue); text-decoration: none; font-weight: 600; border-bottom: 2px solid var(--jnr-red); padding-bottom: 2px; transition: var(--transition); display: inline-block; }
 .btn-read-more:hover { color: var(--jnr-red); }
 
 /* =========================================
@@ -790,9 +799,9 @@ img {
 .contact-left {
   flex: 1;
   min-width: 400px;
-  background: linear-gradient(to right, rgba(235, 225, 240, 0.9), rgba(245, 220, 215, 0.85)), url('photo_2026-07-30_16-21-27.jpg') center/cover;
+  background: linear-gradient(to right, rgba(26, 41, 84, 0.9), rgba(26, 41, 84, 0.85)), url('photo_2026-07-30_16-21-27.jpg') center/cover;
   padding: 80px 5%;
-  color: var(--jnr-blue);
+  color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -814,7 +823,7 @@ img {
   margin-bottom: 50px;
   max-width: 90%;
   line-height: 1.6;
-  color: #2b3964;
+  color: #e0e0e0;
 }
 
 .contact-info-list {
@@ -832,17 +841,17 @@ img {
 .info-item i {
   font-size: 1.4rem;
   margin-top: 3px;
-  color: var(--jnr-blue);
+  color: var(--white);
 }
 
 .info-item h4 {
   font-size: 1.1rem;
   margin-bottom: 3px;
-  color: var(--jnr-blue);
+  color: var(--white);
 }
 
 .info-item p {
-  color: #2b3964;
+  color: #e0e0e0;
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -989,8 +998,8 @@ img {
    RESPONSIVE DESIGN (MOBILE & TABLET)
 ========================================= */
 @media (max-width: 992px) {
-  .custom-navbar { flex-direction: column; gap: 20px; padding: 20px 5%; }
-  .nav-left, .nav-right { gap: 20px; }
+  .custom-navbar { display: flex; flex-direction: column; gap: 20px; padding: 20px 5%; }
+  .nav-left, .nav-right { flex-wrap: wrap; justify-content: center; gap: 20px; }
   .hero-title { font-size: 2.8rem; }
   .cursive-accent { font-size: 3.5rem; }
   .search-container { border-radius: 15px; padding: 20px; }
@@ -1003,7 +1012,6 @@ img {
   .property-container { grid-template-columns: 1fr; }
   .sidebar-actions { justify-content: flex-start; }
   .prop-details-grid { grid-template-columns: 1fr; }
-  
   .contact-page-wrapper { flex-direction: column; }
   .contact-left, .contact-right { min-width: 100%; }
   .form-row { flex-direction: column; gap: 30px; }
