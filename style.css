@@ -103,14 +103,15 @@ img {
 ========================================= */
 .hero-section {
   padding: 100px 5%;
-  background-color: var(--bg-light);
+  /* Dark blue/purple overlay combined with the house image */
+  background: linear-gradient(rgba(51, 62, 117, 0.85), rgba(51, 62, 117, 0.85)), url('photo_2026-08-07_16-48-45.jpg') center/cover no-repeat;
   text-align: center;
 }
 
 .hero-title {
   font-family: var(--font-heading);
   font-size: 4rem;
-  color: var(--jnr-blue);
+  color: var(--white); /* White text for dark background */
   line-height: 1.2;
   margin-bottom: 40px;
 }
@@ -133,7 +134,7 @@ img {
   background: var(--white);
   padding: 15px;
   border-radius: 60px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
 .search-form {
@@ -201,7 +202,7 @@ img {
   font-family: var(--font-base);
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--text-muted);
+  color: var(--white); /* White text for dark background */
   letter-spacing: 0.5px;
 }
 
