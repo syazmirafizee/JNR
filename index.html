@@ -3,100 +3,444 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JNR Capital - Affordable Dream Homes</title>
+    <title>JNR Capital - Affordable Real Estate Properties</title>
+    
+    <!-- Google Fonts: Inter (Base), Playfair Display (Heading), Great Vibes (Cursive accent) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to your stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Symmetrical Split Navigation -->
-    <header class="main-header">
-        <nav>
+    <!-- White Navigation Bar -->
+    <nav class="custom-navbar">
+        <!-- Left Navigation -->
+        <div class="nav-left">
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
-        </nav>
-        
-        <div class="logo-container">
+        </div>
+
+        <!-- Center Logo -->
+        <div class="nav-center">
             <a href="index.html">
-                <img src="logo.png" alt="JNR Capital Logo">
+                <img src="logo.png" alt="JNR Capital Logo" class="brand-logo">
             </a>
         </div>
-        
-        <nav>
+
+        <!-- Right Navigation -->
+        <div class="nav-right">
             <a href="portfolio.html">Portfolio</a>
             <a href="insights.html">Insights</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
-    <!-- Hero Search Section -->
-    <section class="hero-section">
-        <h1>Find Your Affordable<br>Dream Home Today in Malaysia</h1>
-        
-        <form class="hero-search-form">
-            <select>
-                <option>Location (All States)</option>
-                <option>Kuala Lumpur</option>
-                <option>Selangor</option>
-                <option>Johor</option>
-                <option>Penang</option>
-            </select>
-            <select>
-                <option>Property Type (All)</option>
-                <option>Condominium</option>
-                <option>Landed House</option>
-                <option>Apartment</option>
-            </select>
-            <select>
-                <option>Budget (All)</option>
-                <option>Below RM 300,000</option>
-                <option>RM 300,000 - RM 500,000</option>
-                <option>Above RM 500,000</option>
-            </select>
-            <select>
-                <option>Sell or Rent (All)</option>
-                <option>Buy</option>
-                <option>Rent</option>
-            </select>
-            <button type="submit">&#128269; SEARCH</button>
-        </form>
-
-        <div class="hero-stats">
-            <span>&bull; 500+ AFFORDABLE HOMES</span>
-            <span>&bull; RM 150 MILLION+ IN SALES</span>
-            <span>&bull; 1,000+ SATISFIED MALAYSIANS</span>
+            <a href="#contact">Contact</a>
         </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Find Your Affordable<br>Dream Home Today
+                <span class="cursive-accent">in Malaysia</span>
+            </h1>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <form class="search-form" id="searchForm">
+                    <div class="input-group">
+                        <select id="filterLocation" aria-label="Location (All States)">
+                            <option value="all" selected>Location (All States)</option>
+                            <option value="kuala-lumpur">Kuala Lumpur</option>
+                            <option value="selangor">Selangor</option>
+                            <option value="johor">Johor</option>
+                            <option value="kedah">Kedah</option>
+                            <option value="kelantan">Kelantan</option>
+                            <option value="negeri-sembilan">Negeri Sembilan</option>
+                            <option value="perak">Perak</option>
+                            <option value="sabah">Sabah</option>
+                            <option value="terengganu">Terengganu</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group divider">
+                        <select id="filterType" aria-label="Property Type">
+                            <option value="all" selected>Property Type (All)</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="condo">Condo</option>
+                            <option value="land">Land</option>
+                        </select>
+                    </div>
+
+                    <!-- Budget Dropdown -->
+                    <div class="input-group divider">
+                        <select id="filterBudget" aria-label="Budget">
+                            <option value="all" selected>Budget (All)</option>
+                            <option value="under250k">Below RM 250,000</option>
+                            <option value="250k-300k">RM 250,000 – RM 300,000</option>
+                            <option value="above300k">Above RM 300,000</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group divider">
+                        <select id="filterStatus" aria-label="Sell or Rent">
+                            <option value="all" selected>Sell or Rent (All)</option>
+                            <option value="sell">For Sale</option>
+                            <option value="rent">For Rent</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i> SEARCH
+                    </button>
+                </form>
+            </div>
+
+            <!-- Statistics / Trust Bar in Malaysian RM -->
+            <div class="hero-stats">
+                <span><span class="dot">&bull;</span> 500+ AFFORDABLE HOMES</span>
+                <span><span class="dot">&bull;</span> RM 150 MILLION+ IN SALES</span>
+                <span><span class="dot">&bull;</span> 1,000+ SATISFIED MALAYSIANS</span>
+            </div>
+        </div>
+        
     </section>
 
     <!-- Featured Properties Section -->
-    <section class="featured-section">
-        <div class="section-heading">
-            <span class="subtitle">EXCLUSIVE OPPORTUNITIES</span>
-            <h2>Featured Real Estate Properties</h2>
-            <p>Explore our hand-picked selection of affordable housing and investment properties across Malaysia.</p>
+    <section class="properties-section" id="properties">
+        <div class="section-header">
+            <span class="section-subtitle">EXCLUSIVE OPPORTUNITIES</span>
+            <h2 class="section-title">Featured Real Estate Properties</h2>
+            <p class="section-desc">Explore our hand-picked selection of affordable housing and investment properties across Malaysia.</p>
         </div>
-        
-        <!-- Property Grid (Reusing the portfolio layout classes from style.css) -->
-        <div class="portfolio-grid">
-            <div class="portfolio-card">
-                <img src="Residensi flora hijauan is new condo in taman melati Gombak.jpg" alt="Residensi Flora Hijauan">
-                <div class="portfolio-info">
-                    <h3>Residensi Flora Hijauan</h3>
+
+        <div class="properties-grid" id="propertiesGrid">
+
+            <!-- Property Card: Taman Seri Lekir, Batu 7, Perak -->
+            <div class="property-card" data-state="perak" data-type="house" data-status="sell" data-price="230800">
+                <div class="property-image">
+                    <img src="photo_2026-08-05_14-56-18.jpg" alt="Taman Seri Lekir Batu 7 Perak">
+                    <span class="property-badge sale">For Sale</span>
+                    <span class="property-price">RM 230,800</span>
+                </div>
+                <div class="property-info">
+                    <span class="property-type">Single-Storey Terrace &bull; Freehold (Malay Reserve)</span>
+                    <h3 class="property-title"><a href="#">Taman Seri Lekir, Batu 7</a></h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Lekir, Perak (4 mins to WCE Highway)</p>
+                    <p class="property-summary">Ready to move in! RM10k Rebate &amp; RM100 Booking Fee only. 64 Terrace &amp; 8 Semi-D units available.</p>
+                    <div class="property-specs">
+                        <span><i class="fas fa-bed"></i> 3 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 960 sqft</span>
+                    </div>
+                    <a href="https://maps.app.goo.gl/EB5phtuZi475WcJFA?g_st=iw" target="_blank" class="property-btn">View Details &amp; Map <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            <div class="portfolio-card">
-                <img src="photo_2026-07-30_15-37-46.jpg" alt="Featured Property 2">
-                <div class="portfolio-info">
-                    <h3>View Property</h3>
+            
+            <!-- Property Card: Taman Karisma, Lekir Perak -->
+            <div class="property-card" data-state="perak" data-type="house" data-status="sell" data-price="325000">
+                <div class="property-image">
+                    <img src="photo_2026-07-30_15-37-46.jpg" alt="Taman Karisma Lekir Perak">
+                    <span class="property-badge sale">For Sale</span>
+                    <span class="property-price">RM 325,000</span>
+                </div>
+                <div class="property-info">
+                    <span class="property-type">Single-Storey Semi-D &bull; Freehold (Malay Reserve)</span>
+                    <h3 class="property-title"><a href="#">Taman Karisma, Lekir Perak</a></h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Lekir, Perak (4 mins to WCE Highway)</p>
+                    <p class="property-summary">New project of 26 Semi-D units. FREE Booking Fee &amp; RM90k Rebate! Expected completion End 2026.</p>
+                    <div class="property-specs">
+                        <span><i class="fas fa-bed"></i> 4 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 1,125 sqft</span>
+                    </div>
+                    <a href="https://maps.app.goo.gl/qefpQXXXRvDC8tUS8?g_st=ac" target="_blank" class="property-btn">View Details &amp; Map <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            <div class="portfolio-card">
-                <img src="photo_2026-07-31_12-07-29.jpg" alt="Featured Property 3">
-                <div class="portfolio-info">
-                    <h3>View Property</h3>
+
+            <!-- Property Card: Taman Lekir Sutera Phase 1, Perak -->
+            <div class="property-card" data-state="perak" data-type="house" data-status="sell" data-price="267000">
+                <div class="property-image">
+                    <img src="photo_2026-07-30_15-57-49.jpg" alt="Taman Lekir Sutera Phase 1 Perak">
+                    <span class="property-badge sale">For Sale</span>
+                    <span class="property-price">RM 267,000</span>
+                </div>
+                <div class="property-info">
+                    <span class="property-type">Single-Storey Terrace &bull; Freehold (Malay Reserve)</span>
+                    <h3 class="property-title"><a href="#">Taman Lekir Sutera Phase 1, Perak</a></h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Lekir, Perak (600m to SK Lekir &amp; 7km to WCE)</p>
+                    <p class="property-summary">Affordable single-storey terrace units. 0% Booking Fee &amp; RM70k markup available! Expected completion Early 2027.</p>
+                    <div class="property-specs">
+                        <span><i class="fas fa-bed"></i> 3 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 900 sqft</span>
+                    </div>
+                    <a href="https://maps.app.goo.gl/kC2mFVvF9cTVpZjE9?g_st=iw" target="_blank" class="property-btn">View Details &amp; Map <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
+
+            <!-- Property Card: Jertih Terrace Project, Terengganu -->
+            <div class="property-card" data-state="terengganu" data-type="house" data-status="sell" data-price="259900">
+                <div class="property-image">
+                    <img src="photo_2026-07-30_16-21-27.jpg" alt="Jertih Single-Storey Terrace Terengganu">
+                    <span class="property-badge sale">For Sale</span>
+                    <span class="property-price">RM 259,900</span>
+                </div>
+                <div class="property-info">
+                    <span class="property-type">Single-Storey Terrace &bull; Freehold (Malay Reserve)</span>
+                    <h3 class="property-title"><a href="#">Jertih Terrace Project, Terengganu</a></h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Jertih, Besut, Terengganu (2 mins to Police Station)</p>
+                    <p class="property-summary">Extra-long 22'x90' lot! FREE Booking Fee &amp; RM95k Rebate (SPA RM354,900). Limited to 17 exclusive units only.</p>
+                    <div class="property-specs">
+                        <span><i class="fas fa-bed"></i> 3 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 880 sqft</span>
+                    </div>
+                    <a href="https://www.google.com/maps?q=5.741962,102.483920" target="_blank" class="property-btn">Project Site Map <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Property Card: Taman Bunga Mas, Pasir Mas, Kelantan -->
+            <div class="property-card" data-state="kelantan" data-type="house" data-status="sell" data-price="228000">
+                <div class="property-image">
+                    <img src="photo_2026-07-31_12-07-29.jpg" alt="Taman Bunga Mas Pasir Mas Kelantan">
+                    <span class="property-badge sale">For Sale</span>
+                    <span class="property-price">RM 228,000</span>
+                </div>
+                <div class="property-info">
+                    <span class="property-type">Single-Storey Terrace &bull; Freehold</span>
+                    <h3 class="property-title"><a href="#">Taman Bunga Mas, Pasir Mas</a></h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Pasir Mas, Kelantan (5 mins to Pasir Mas Hospital)</p>
+                    <p class="property-summary">312 Single-Storey Terrace units. 0% Booking Fee, RM80k Rebate &amp; FREE Legal Fees! Completed July 2026.</p>
+                    <div class="property-specs">
+                        <span><i class="fas fa-bed"></i> 3 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 1,134 sqft</span>
+                    </div>
+                    <a href="https://www.google.com/maps/place/6%C2%B000'43.1%22N+102%C2%B005'56.3%22E/@6.0118529,102.098919,21z/data=!4m5!3m4!1s0x0:0x7716531f5951ddb6!8m2!3d6.0119672!4d102.0989609?hl=en" target="_blank" class="property-btn">Project Site Map <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Property Card: Lyra @ La Lumiere, Kulai, Johor -->
+            <div class="property-card" data-state="johor" data-type="house" data-status="sell" data-price="320000">
+                <div class="property-image">
+                    <img src="photo_2026-07-31_12-32-43.jpg" alt="Lyra @ La Lumiere Kulai Johor">
+                    <span class="property-badge sale">For Sale</span>
+                    <span class="property-price">RM 320,000</span>
+                </div>
+                <div class="property-info">
+                    <span class="property-type">Single-Storey Terrace &bull; Freehold</span>
+                    <h3 class="property-title"><a href="#">Lyra @ La Lumiere, Kulai</a></h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Kulai, Johor (10 mins to Kulai Town &amp; SK Kulai)</p>
+                    <p class="property-summary">Freehold single-storey terrace units. Up to RM58k Rebate &amp; RM300 Booking Fee only! Expected completion 2028.</p>
+                    <div class="property-specs">
+                        <span><i class="fas fa-bed"></i> 3 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 900 sqft</span>
+                    </div>
+                    <a href="https://maps.app.goo.gl/ZbfcMk6wew6WzDdE9" target="_blank" class="property-btn">View Details &amp; Map <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Property Card: Taman Nilam, Chengkau Rembau, Negeri Sembilan -->
+            <div class="property-card" data-state="negeri-sembilan" data-type="house" data-status="sell" data-price="319000">
+                <div class="property-image">
+                    <img src="photo_2026-07-31_14-56-38.jpg" alt="Taman Nilam Chengkau Rembau Negeri Sembilan">
+                    <span class="property-badge sale">For Sale</span>
+                    <span class="property-price">RM 319,000</span>
+                </div>
+                <div class="property-info">
+                    <span class="property-type">Single-Storey Terrace &bull; Freehold (Malay Reserve)</span>
+                    <h3 class="property-title"><a href="#">Taman Nilam, Chengkau Rembau</a></h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Rembau, Negeri Sembilan (11 mins to Komuter Station)</p>
+                    <p class="property-summary">Spacious 20'x80' single-storey terrace. RM0 Booking Fee &amp; up to RM56k Rebate! Expected completion Mid 2026.</p>
+                    <div class="property-specs">
+                        <span><i class="fas fa-bed"></i> 3 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 1,200 sqft</span>
+                    </div>
+                    <a href="https://maps.app.goo.gl/D6edsJcGACXDk5sy8" target="_blank" class="property-btn">View Details &amp; Map <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Property Card: Lagenda Ardea, Bernam Jaya, Selangor -->
+            <div class="property-card" data-state="selangor" data-type="house" data-status="sell" data-price="257300">
+                <div class="property-image">
+                    <img src="image_6932b1.jpg" alt="Lagenda Ardea Bernam Jaya Selangor">
+                    <span class="property-badge sale">For Sale</span>
+                    <span class="property-price">RM 257,300</span>
+                </div>
+                <div class="property-info">
+                    <span class="property-type">Single-Storey Terrace &bull; Affordable Housing</span>
+                    <h3 class="property-title"><a href="#">Lagenda Ardea, Bernam Jaya</a></h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Bernam Jaya, Selangor (1 km to NSE &amp; ETS Station)</p>
+                    <p class="property-summary">Affordable single-storey terrace in Selangor! RM28.6k Rebate &amp; RM100 Booking Fee (Refundable). Near UPSI &amp; Tanjung Malim.</p>
+                    <div class="property-specs">
+                        <span><i class="fas fa-bed"></i> 3 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 900 sqft</span>
+                    </div>
+                    <a href="https://maps.app.goo.gl/JHX9PgSTKtRXyP3G8?g_st=iwb" target="_blank" class="property-btn">View Details &amp; Map <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Property Card: Lagenda Mersing, Johor -->
+            <div class="property-card" data-state="johor" data-type="house" data-status="sell" data-price="233000">
+                <div class="property-image">
+                    <img src="photo_2026-07-31_15-22-37.jpg" alt="Lagenda Mersing Johor">
+                    <span class="property-badge sale">For Sale</span>
+                    <span class="property-price">RM 233,000</span>
+                </div>
+                <div class="property-info">
+                    <span class="property-type">Single-Storey Terrace &bull; Freehold</span>
+                    <h3 class="property-title"><a href="#">Lagenda Mersing, Johor</a></h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Mersing, Johor (8 mins to Mersing Beach &amp; Hospital)</p>
+                    <p class="property-summary">422-hectare township with football field &amp; cycling track. Up to RM30k Rebate &amp; RM300 Booking Fee! Completion 2028.</p>
+                    <div class="property-specs">
+                        <span><i class="fas fa-bed"></i> 3 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 900 sqft</span>
+                    </div>
+                    <a href="https://maps.app.goo.gl/6FyGRuPqYK22r5W8A" target="_blank" class="property-btn">View Details &amp; Map <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Property Card: Damar Residence, Kinarut, Sabah -->
+            <div class="property-card" data-state="sabah" data-type="condo" data-status="sell" data-price="300000">
+                <div class="property-image">
+                    <img src="photo_2026-07-31_15-41-30.jpg" alt="Damar Residence Kinarut Sabah">
+                    <span class="property-badge sale">For Sale</span>
+                    <span class="property-price">RM 500 Booking</span>
+                </div>
+                <div class="property-info">
+                    <span class="property-type">Condominium &bull; Freehold (Non-Bumi)</span>
+                    <h3 class="property-title"><a href="#">Damar Residence, Kinarut</a></h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Kinarut, Sabah (4.5 km to Kem Lok Kawi)</p>
+                    <p class="property-summary">High-rise condo near Lok Kawi Recreational Park. Military debt settlement assistance available! Expected completion 2027.</p>
+                    <div class="property-specs">
+                        <span><i class="fas fa-bed"></i> 2 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 840 sqft</span>
+                    </div>
+                    <a href="https://g.co/kgs/W748B2" target="_blank" class="property-btn">View Details &amp; Map <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Property Card: Taman Bunga Tanjung, Mahang, Kulim, Kedah (SOLD OUT) -->
+            <div class="property-card" data-state="kedah" data-type="house" data-status="sell" data-price="230900">
+                <div class="property-image">
+                    <img src="photo_2026-07-31_15-51-54.jpg" alt="Taman Bunga Tanjung Mahang Kulim Kedah">
+                    <span class="property-badge sold">Sold Out</span>
+                    <span class="property-price">RM 230,900</span>
+                </div>
+                <div class="property-info">
+                    <span class="property-type">Single-Storey Terrace &bull; Freehold (Malay Reserve)</span>
+                    <h3 class="property-title"><a href="#">Taman Bunga Tanjung, Kulim</a></h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Mahang, Kulim, Kedah (1 min to SMK Mahang &amp; ADTEC)</p>
+                    <p class="property-summary">Fully tiled single-storey terrace with a 2-car porch. Near Mahang Town &amp; Kulim Hi-Tech Park. [SOLD OUT]</p>
+                    <div class="property-specs">
+                        <span><i class="fas fa-bed"></i> 3 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 1,200 sqft</span>
+                    </div>
+                    <a href="#" class="property-btn sold-btn">Sold Out <i class="fas fa-ban"></i></a>
+                </div>
+            </div>
+
+            <!-- Property Card: Apartment Flora Hijauan, Gombak KL (SOLD OUT) -->
+            <div class="property-card" data-state="kuala-lumpur" data-type="apartment" data-status="sell" data-price="319900">
+                <div class="property-image">
+                    <img src="Residensi flora hijauan is new condo in taman melati Gombak.jpg" alt="Apartment Flora Hijauan Gombak KL">
+                    <span class="property-badge sold">Sold Out</span>
+                    <span class="property-price">RM 319,900</span>
+                </div>
+                <div class="property-info">
+                    <span class="property-type">Apartment / Condo &bull; Freehold (Malay Reserve)</span>
+                    <h3 class="property-title"><a href="#">Apartment Flora Hijauan, Gombak</a></h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Taman Melati, Gombak, Kuala Lumpur</p>
+                    <p class="property-summary">Turkish-inspired architecture. 7 mins walk to LRT Gombak &amp; ECRL TBG. Free SPA &amp; Legal Fees! [SOLD OUT]</p>
+                    <div class="property-specs">
+                        <span><i class="fas fa-bed"></i> 3 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 819 sqft</span>
+                    </div>
+                    <a href="#" class="property-btn sold-btn">Sold Out <i class="fas fa-ban"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- No Results Message (Hidden by default) -->
+        <div id="noResults" class="no-results" style="display: none;">
+            <i class="fas fa-home"></i>
+            <h3>No Properties Found</h3>
+            <p>We couldn't find any properties matching your search filters. Try selecting "All" or choosing another filter.</p>
         </div>
     </section>
+
+    <!-- Interactive Search Filtering Script -->
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form reload
+            filterProperties();
+            
+            // Smooth scroll down to properties section
+            document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        function filterProperties() {
+            const selectedLocation = document.getElementById('filterLocation').value;
+            const selectedType = document.getElementById('filterType').value;
+            const selectedBudget = document.getElementById('filterBudget').value;
+            const selectedStatus = document.getElementById('filterStatus').value;
+
+            const cards = document.querySelectorAll('.property-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cardState = card.getAttribute('data-state');
+                const cardType = card.getAttribute('data-type');
+                const cardStatus = card.getAttribute('data-status');
+                const cardPrice = parseInt(card.getAttribute('data-price'), 10) || 0;
+
+                const matchLocation = (selectedLocation === 'all' || cardState === selectedLocation);
+                const matchType = (selectedType === 'all' || cardType === selectedType);
+                const matchStatus = (selectedStatus === 'all' || cardStatus === selectedStatus);
+
+                // Check budget condition
+                let matchBudget = true;
+                if (selectedBudget === 'under250k') {
+                    matchBudget = cardPrice < 250000;
+                } else if (selectedBudget === '250k-300k') {
+                    matchBudget = cardPrice >= 250000 && cardPrice <= 300000;
+                } else if (selectedBudget === 'above300k') {
+                    matchBudget = cardPrice > 300000;
+                }
+
+                if (matchLocation && matchType && matchBudget && matchStatus) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show or hide "No Results" message
+            const noResultsMsg = document.getElementById('noResults');
+            if (visibleCount === 0) {
+                noResultsMsg.style.display = 'block';
+            } else {
+                noResultsMsg.style.display = 'none';
+            }
+        }
+    </script>
 
 </body>
 </html>
