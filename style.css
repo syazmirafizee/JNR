@@ -2,8 +2,8 @@
    JNR CAPITAL - GLOBAL VARIABLES & RESET
 ========================================= */
 :root {
-  --jnr-blue: #1A2954; /* JNR Capital Navy */
-  --jnr-red: #D12027;  /* JNR Capital Red */
+  --jnr-blue: #1A2954; 
+  --jnr-red: #D12027;  
   --bg-light: #F8F9FA;
   --text-dark: #333333;
   --text-muted: #666666;
@@ -688,7 +688,7 @@ img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .agent-info h4 {
