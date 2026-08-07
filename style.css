@@ -74,12 +74,12 @@ img {
   font-weight: 600;
   font-size: 1.05rem;
   transition: transform 0.3s ease, color 0.3s ease;
-  display: inline-block; /* Required for transform scale to work properly */
+  display: inline-block;
 }
 
 .custom-navbar a:hover, .custom-navbar a.active {
   color: var(--jnr-red);
-  transform: scale(1.1); /* Enlarges the link on hover */
+  transform: scale(1.1);
 }
 
 .nav-center .brand-logo {
@@ -771,7 +771,7 @@ img {
 }
 
 .btn-outline:hover {
-  background-color: var(--bg-light);
+  background: var(--bg-light);
 }
 
 .agent-disclaimer {
@@ -1012,6 +1012,7 @@ img {
   .property-container { grid-template-columns: 1fr; }
   .sidebar-actions { justify-content: flex-start; }
   .prop-details-grid { grid-template-columns: 1fr; }
+  
   .contact-page-wrapper { flex-direction: column; }
   .contact-left, .contact-right { min-width: 100%; }
   .form-row { flex-direction: column; gap: 30px; }
