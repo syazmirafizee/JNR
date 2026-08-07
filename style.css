@@ -2,8 +2,8 @@
    JNR CAPITAL - GLOBAL VARIABLES & RESET
 ========================================= */
 :root {
-  --jnr-blue: #1A2954; 
-  --jnr-red: #D12027;  
+  --jnr-blue: #1A2954; /* JNR Capital Navy */
+  --jnr-red: #D12027;  /* JNR Capital Red */
   --bg-light: #F8F9FA;
   --text-dark: #333333;
   --text-muted: #666666;
@@ -469,14 +469,12 @@ img {
   gap: 50px;
 }
 
-/* Common Horizontal Divider */
 .prop-divider {
   border: 0;
   border-top: 1px solid var(--border-light);
   margin: 25px 0;
 }
 
-/* Left Column: Main Content */
 .property-main .prop-header h1 {
   font-family: var(--font-base);
   font-size: 2.2rem;
@@ -734,7 +732,7 @@ img {
 }
 
 .btn-whatsapp {
-  background-color: #C00000; /* Custom red to match screenshot */
+  background-color: #C00000;
   color: var(--white);
   border: none;
 }
@@ -780,8 +778,6 @@ img {
   .search-btn { width: 100%; justify-content: center; border-radius: 8px; margin-top: 10px; }
   .section-title { font-size: 2.2rem; }
   .property-specs { flex-direction: column; gap: 10px; }
-  
-  /* Property Detail Responsive */
   .property-container { grid-template-columns: 1fr; }
   .sidebar-actions { justify-content: flex-start; }
   .prop-details-grid { grid-template-columns: 1fr; }
