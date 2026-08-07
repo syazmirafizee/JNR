@@ -10,10 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Stylesheet -->
+    <!-- Link to your stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -36,255 +36,163 @@
         </div>
     </nav>
 
-    <!-- Property Detail Container -->
-    <div class="property-detail-wrapper">
-        
-        <!-- Left Column: Property Information -->
-        <div class="detail-main-content">
+    <!-- Property Details Wrapper -->
+    <div class="property-details-wrapper">
+        <div class="property-container">
             
-            <!-- Header -->
-            <div class="detail-header">
-                <h1 class="detail-title" id="p-title">Loading...</h1>
-                <p class="detail-location"><i class="fas fa-map-marker-alt"></i> <span id="p-location"></span></p>
-                <h2 class="detail-price" id="p-price"></h2>
-            </div>
-
-            <hr class="detail-divider">
-
-            <!-- Quick Stats -->
-            <div class="detail-quick-stats">
-                <div class="stat-item">
-                    <i class="fas fa-bed"></i>
-                    <span class="stat-value" id="p-beds"></span>
-                    <span class="stat-label">Beds</span>
+            <!-- Left Column: Main Content -->
+            <main class="property-main">
+                
+                <!-- Header Info -->
+                <div class="prop-header">
+                    <h1>Taman Uni Garden</h1>
+                    <p class="prop-location">Taman Uni Garden, Samarahan, Sarawak</p>
+                    <div class="prop-price">RM 500,000</div>
                 </div>
-                <div class="stat-item">
-                    <i class="fas fa-bath"></i>
-                    <span class="stat-value" id="p-baths"></span>
-                    <span class="stat-label">Baths</span>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-ruler-combined"></i>
-                    <span class="stat-value" id="p-land"></span>
-                    <span class="stat-label">sqft (land)</span>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-home"></i>
-                    <span class="stat-value" id="p-built"></span>
-                    <span class="stat-label">sqft (built)</span>
-                </div>
-            </div>
 
-            <hr class="detail-divider">
+                <hr class="prop-divider">
 
-            <!-- Loan Affordability -->
-            <div class="loan-check">
-                <i class="fas fa-hand-holding-usd"></i>
-                <a href="#">Check loan affordability estimation</a>
-            </div>
-
-            <!-- Media Thumbnails -->
-            <div class="media-thumbnails">
-                <div class="thumb-box">
-                    <img id="p-image" src="" alt="Photos">
-                    <span>Photos</span>
+                <!-- Quick Specs -->
+                <div class="prop-quick-specs">
+                    <div class="spec-item">
+                        <i class="fas fa-bed"></i>
+                        <span class="spec-val">4</span>
+                        <span class="spec-lbl">Beds</span>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-bath"></i>
+                        <span class="spec-val">3</span>
+                        <span class="spec-lbl">Baths</span>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-ruler-combined"></i>
+                        <span class="spec-val">1,807</span>
+                        <span class="spec-lbl">sqft (land)</span>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-tags"></i>
+                        <span class="spec-val">RM 276.70</span>
+                        <span class="spec-lbl">psf (land)</span>
+                    </div>
                 </div>
-                <a id="p-maplink" href="#" target="_blank" style="text-decoration:none;">
-                    <div class="thumb-box">
-                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=200&q=80" alt="Map View">
+
+                <hr class="prop-divider">
+
+                <!-- Loan Affordability -->
+                <div class="prop-affordability">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <a href="#">Check loan affordability est. RM 2,096 / mo</a>
+                </div>
+
+                <hr class="prop-divider">
+
+                <!-- Media Thumbnails -->
+                <div class="prop-media-thumbnails">
+                    <div class="media-box">
+                        <!-- Placeholder for interior photo -->
+                        <img src="photo_2026-08-05_14-56-18.jpg" alt="Property Photos">
+                        <span>Photos</span>
+                    </div>
+                    <div class="media-box">
+                        <!-- Placeholder for map view -->
+                        <img src="photo_2026-07-31_12-07-29.jpg" alt="Map View">
                         <span>Map View</span>
                     </div>
-                </a>
-            </div>
+                </div>
 
-            <hr class="detail-divider">
+                <hr class="prop-divider">
 
-            <!-- Property Details Grid -->
-            <div class="detail-section">
-                <h3>Property details</h3>
-                <div class="details-grid">
-                    <div class="detail-grid-item">
+                <!-- Property Details Grid -->
+                <h2 class="prop-section-title">Property details</h2>
+                <div class="prop-details-grid">
+                    <div class="detail-row">
                         <i class="fas fa-home"></i>
-                        <span id="p-type"></span>
+                        <span>2-storey Terraced House for sale</span>
                     </div>
-                    <div class="detail-grid-item">
+                    <div class="detail-row">
                         <i class="fas fa-couch"></i>
-                        <span id="p-furnishing"></span>
+                        <span>Partially furnished</span>
                     </div>
-                    <div class="detail-grid-item">
-                        <i class="far fa-calendar-alt"></i>
-                        <span id="p-tenure"></span>
+                    <div class="detail-row">
+                        <i class="far fa-calendar-check"></i>
+                        <span>Freehold tenure</span>
                     </div>
-                    <div class="detail-grid-item">
+                    <div class="detail-row">
                         <i class="far fa-clock"></i>
-                        <span>Listed Recently</span>
+                        <span>Listed on 21 Jun 2026</span>
                     </div>
-                    <div class="detail-grid-item">
+                    <div class="detail-row">
                         <i class="far fa-file-alt"></i>
-                        <span id="p-status"></span>
+                        <span>Listing ID - 501574066</span>
                     </div>
-                    <div class="detail-grid-item">
-                        <i class="fas fa-tag"></i>
-                        <span id="p-promo" style="color:var(--theme-color); font-weight:700;"></span>
+                    <div class="detail-row">
+                        <i class="fas fa-vector-square"></i>
+                        <span>1,807 sqft floor area</span>
                     </div>
                 </div>
-            </div>
+                <button class="btn-outline-pill">See all details</button>
 
-            <hr class="detail-divider">
+                <hr class="prop-divider">
 
-            <!-- About This Property Text -->
-            <div class="detail-section">
-                <h3>About this property</h3>
-                <p class="about-tagline" id="p-tagline"></p>
-                <div class="about-text" id="p-desc"></div>
-            </div>
+                <!-- About this property -->
+                <h2 class="prop-section-title">About this property</h2>
+                <div class="prop-about">
+                    <p style="border-left: 2px solid #ccc; padding-left: 10px; margin-bottom: 20px;">
+                        Hidden Gem Freehold Terrace House @ Uni Garden Kota Samarahan
+                    </p>
+                    <p>House for Sale [HFS0954]</p>
+                    <p>Property Type: Terrace House (Double Storey)<br>Location: Uni Garden, Kota Samarahan...</p>
+                </div>
+                <button class="btn-outline-pill" style="margin-top: 10px;">See more</button>
+
+            </main>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="property-sidebar">
+                
+                <!-- Action Buttons -->
+                <div class="sidebar-actions">
+                    <button class="btn-icon-pill"><i class="far fa-heart"></i> Shortlist</button>
+                    <button class="btn-icon-pill"><i class="fas fa-share"></i> Share</button>
+                    <button class="btn-circle"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+
+                <!-- Agent Card -->
+                <div class="agent-card">
+                    <div class="agent-header">
+                        <!-- You can use the generic image from your previous pages as a placeholder avatar -->
+                        <img src="logo.png" alt="Alfred Chua" class="agent-avatar" style="border: 1px solid #eee;">
+                        <div class="agent-info">
+                            <h4>Alfred Chua</h4>
+                            <p>THE ROOF REALTY SDN. BHD. [ E (1)<br>1605/6 ]</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+
+                    <div class="agent-buttons">
+                        <button class="btn-full btn-whatsapp">
+                            <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> WhatsApp
+                        </button>
+                        <button class="btn-full btn-outline">
+                            <i class="fas fa-qrcode"></i> WhatsApp QR
+                        </button>
+                        <button class="btn-full btn-outline">
+                            <i class="fas fa-phone-alt"></i> View Phone Number
+                        </button>
+                        <button class="btn-full btn-outline">
+                            <i class="far fa-envelope"></i> Send Enquiry
+                        </button>
+                    </div>
+
+                    <p class="agent-disclaimer">
+                        By continuing, you agree to the <a href="#">Terms</a> &amp; <a href="#">Privacy Policy</a>
+                    </p>
+                </div>
+
+            </aside>
 
         </div>
-
-        <!-- Right Column: Sidebar / Agent Info -->
-        <div class="detail-sidebar">
-            <div class="sidebar-top-actions">
-                <button class="btn-outline-pill"><i class="far fa-heart"></i> Shortlist</button>
-                <button class="btn-outline-pill"><i class="fas fa-share"></i> Share</button>
-            </div>
-
-            <div class="agent-card">
-                <div class="agent-info">
-                    <img src="https://ui-avatars.com/api/?name=Sales+Team&background=1e224f&color=fff&rounded=true" alt="Agent" class="agent-avatar">
-                    <div class="agent-text">
-                        <h4>JNR Sales Team</h4>
-                        <p>JNR CAPITAL SDN. BHD.</p>
-                    </div>
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-
-                <div class="contact-actions">
-                    <button class="btn-solid-red"><i class="fab fa-whatsapp"></i> WhatsApp</button>
-                    <button class="btn-outline-full"><i class="fas fa-qrcode"></i> WhatsApp QR</button>
-                    <button class="btn-outline-full"><i class="fas fa-phone-alt"></i> View Phone Number</button>
-                    <button class="btn-outline-full"><i class="far fa-envelope"></i> Send Enquiry</button>
-                </div>
-                <p class="terms-text">By continuing, you agree to the <a href="#">Terms</a> & <a href="#">Privacy Policy</a></p>
-            </div>
-        </div>
-
     </div>
 
-    <!-- Dynamic Property Loader Script -->
-    <script>
-        // Database of all 12 properties
-        const properties = {
-            "1": {
-                title: "Taman Seri Lekir, Batu 7", location: "Lekir, Perak", price: "RM 230,800", beds: "3", baths: "2", land: "1,400", built: "960",
-                type: "Single-Storey Terrace for Sale", furnishing: "Unfurnished", tenure: "Freehold (Malay Reserve)", status: "Ready to move in", promo: "RM 10,000 Rebate",
-                img: "photo_2026-08-05_14-56-18.jpg", mapLink: "https://maps.app.goo.gl/EB5phtuZi475WcJFA?g_st=iw",
-                tagline: "Affordable Dream Home @ Taman Seri Lekir, Perak",
-                desc: "New housing project developed in the Lekir area, Perak, featuring 64 Single-Storey Terrace units and 8 Semi-D units by our company.<br><br><strong>Strategic Location:</strong><br>• 4 mins to WCE Highway & SK Primary School<br>• 5 mins to SMK Secondary School<br>• 10 mins to Lekir Farmers Market<br>• 16 mins to Seri Manjung Hospital<br>• 17 mins to Aeon Manjung<br><br>Booking fee is only RM 100. Houses are fully completed and ready for you!"
-            },
-            "2": {
-                title: "Taman Karisma, Lekir Perak", location: "Lekir, Perak", price: "RM 325,000", beds: "4", baths: "2", land: "2,625", built: "1,125",
-                type: "Single-Storey Semi-D for Sale", furnishing: "Unfurnished", tenure: "Freehold (Malay Reserve)", status: "Expected Completion End 2026", promo: "RM 90,000 Rebate + FREE Booking",
-                img: "photo_2026-07-30_15-37-46.jpg", mapLink: "https://maps.app.goo.gl/qefpQXXXRvDC8tUS8?g_st=ac",
-                tagline: "Exclusive Semi-D Living in Lekir",
-                desc: "A new residential development around Lekir, Perak featuring 26 units of Single-Storey Semi-Detached Houses.<br><br><strong>Highlights:</strong><br>• Freehold Malay Reserve<br>• 4 mins to West Coast Expressway (WCE)<br>• 16 mins to Seri Manjung Hospital<br>• 28 mins to Teluk Batik Beach<br><br>Grab the RM90k rebate today with absolutely ZERO booking fee!"
-            },
-            "3": {
-                title: "Taman Lekir Sutera Phase 1", location: "Lekir, Perak", price: "RM 267,000", beds: "3", baths: "2", land: "1,400", built: "900",
-                type: "Single-Storey Terrace for Sale", furnishing: "Unfurnished", tenure: "Freehold (Malay Reserve)", status: "Expected Completion Early 2027", promo: "RM 70,000 Markup Available",
-                img: "photo_2026-07-30_15-57-49.jpg", mapLink: "https://maps.app.goo.gl/kC2mFVvF9cTVpZjE9?g_st=iw",
-                tagline: "Your New Family Home in Lekir",
-                desc: "Single-Storey Terrace Houses located in Lekir, Perak.<br><br><strong>Accessibility:</strong><br>• 600m to SK Lekir<br>• 7km to SMK Lekir and WCE Highway<br>• 10km to Sitiawan Town<br>• 12km to AEON Seri Manjung<br><br>Book your unit today with 0% booking fee!"
-            },
-            "4": {
-                title: "Jertih Terrace Project", location: "Jertih, Besut, Terengganu", price: "RM 259,900", beds: "3", baths: "2", land: "1,980", built: "880",
-                type: "Single-Storey Terrace for Sale", furnishing: "Unfurnished", tenure: "Freehold (Malay Reserve)", status: "Under Construction", promo: "RM 95,000 Rebate + FREE Booking",
-                img: "photo_2026-07-30_16-21-27.jpg", mapLink: "https://www.google.com/maps?q=5.741962,102.483920",
-                tagline: "Extra-Long Land Footprint in Jertih",
-                desc: "Single-Storey Terrace Houses located in Jertih, Besut, Terengganu with an extra-long land footprint of 22'x90'. Limited to 17 exclusive units only.<br><br><strong>Location:</strong><br>• 2 mins to Ulul Albab Mosque & Police Station<br>• 6 mins to Econjaya, Giant, SK Pelagat, SMK Pelagat<br>• 7 mins to Besut Hospital<br><br>SPA Price RM354,900. Get it now at the net price of RM259,900."
-            },
-            "5": {
-                title: "Taman Bunga Mas", location: "Pasir Mas, Kelantan", price: "RM 228,000", beds: "3", baths: "2", land: "1,130", built: "1,134",
-                type: "Single-Storey Terrace for Sale", furnishing: "Unfurnished", tenure: "Freehold", status: "Expected Completion July 2026", promo: "Up to RM 80k Rebate + FREE Legal",
-                img: "photo_2026-07-31_12-07-29.jpg", mapLink: "https://www.google.com/maps/place/6%C2%B000'43.1%22N+102%C2%B005'56.3%22E/@6.0118529,102.098919,21z",
-                tagline: "Affordable Housing in Pasir Mas",
-                desc: "A new residential development around Pasir Mas, Kelantan featuring 312 units of Single-Storey Terrace Houses.<br><br><strong>Amenities:</strong><br>• 2 mins to Pantai Timor Mart<br>• 3 mins to MARA Higher Skills College<br>• 5 mins to Pasir Mas Hospital<br>• 8 mins to Repek Police Station & SK Lati<br><br>Secure yours today with a 0% Booking Fee!"
-            },
-            "6": {
-                title: "Lyra @ La Lumiere", location: "Kulai, Johor", price: "RM 320,000", beds: "3", baths: "2", land: "1,300", built: "900",
-                type: "Single-Storey Terrace for Sale", furnishing: "Unfurnished", tenure: "Freehold", status: "Expected Completion 2028", promo: "Up to RM 58,000 Rebate",
-                img: "photo_2026-07-31_12-32-43.jpg", mapLink: "https://maps.app.goo.gl/ZbfcMk6wew6WzDdE9",
-                tagline: "Family-Friendly Community in Kulai",
-                desc: "New Single-Storey Terrace Houses in Kulai, Johor with freehold title and family-friendly community amenities including Mosque, Schools, Clinic, Hawker Center, and Playground.<br><br><strong>Location:</strong><br>• 10 mins to Kulai Town<br>• 12 mins to AEON Mall Kulai<br>• 18 mins to Johor Premium Outlets (JPO)<br>• 22 mins to Senai International Airport<br><br>Booking Fee is only RM300."
-            },
-            "7": {
-                title: "Taman Nilam, Chengkau Rembau", location: "Rembau, Negeri Sembilan", price: "RM 319,000", beds: "3", baths: "2", land: "1,600", built: "1,200",
-                type: "Single-Storey Terrace for Sale", furnishing: "Unfurnished", tenure: "Freehold (Malay Reserve)", status: "Expected Completion Mid 2026", promo: "RM 0 Booking + Max RM 56k Rebate",
-                img: "photo_2026-07-31_14-56-38.jpg", mapLink: "https://maps.app.goo.gl/D6edsJcGACXDk5sy8",
-                tagline: "Highly Strategic Location in Rembau",
-                desc: "New Single-Storey Terrace residential development located in a highly strategic area in Rembau, Negeri Sembilan.<br><br><strong>Amenities:</strong><br>• 1 min to Yayasan As-Sofa & SK Chengkau<br>• 3 mins to SMK Undang Hj Adnan<br>• 9 mins to Rembau Town<br>• 11 mins to Rembau Komuter Station<br>• 12 mins to Simpang Ampat Toll Plaza"
-            },
-            "8": {
-                title: "Lagenda Ardea, Bernam Jaya", location: "Bernam Jaya, Selangor", price: "RM 257,300", beds: "3", baths: "2", land: "1,300", built: "900",
-                type: "Single-Storey Terrace for Sale", furnishing: "Unfurnished", tenure: "Freehold", status: "Under Construction", promo: "RM 28,600 Rebate",
-                img: "image_6932b1.jpg", mapLink: "https://maps.app.goo.gl/JHX9PgSTKtRXyP3G8?g_st=iwb",
-                tagline: "Affordable Selangor Housing",
-                desc: "Affordable Single-Storey Terrace Housing Project located in Bernam Jaya, Selangor Darul Ehsan.<br><br><strong>Highlights:</strong><br>• 1 km to North-South Expressway (NSE)<br>• 1 km to ETS / Commuter Tanjung Malim<br>• 5 km to Sultan Idris Education University (UPSI)<br>• 15 km to Kuala Kubu Bharu Hospital<br><br>Booking fee RM 100 only (Refundable T&C)."
-            },
-            "9": {
-                title: "Lagenda Mersing", location: "Mersing, Johor", price: "RM 233,000", beds: "3", baths: "2", land: "1,300", built: "900",
-                type: "Single-Storey Terrace for Sale", furnishing: "Unfurnished", tenure: "Freehold", status: "Expected Completion 2028", promo: "Up to RM 30,000 Rebate",
-                img: "photo_2026-07-31_15-22-37.jpg", mapLink: "https://maps.app.goo.gl/6FyGRuPqYK22r5W8A",
-                tagline: "Massive 422-Hectare Township",
-                desc: "A massive 422-hectare Single-Storey Terrace residential township development located in Mersing, Johor. Features Children's Playground, Football Field, Cycling Track, Jogging Track, and Kindergarten.<br><br><strong>Location:</strong><br>• 4 mins to SK Mersing Kanan, KPDNKK, Supermarkets<br>• 8 mins to Mersing Hospital, Mosque, Polytechnic & Beach<br><br>RM300 Booking Fee Only."
-            },
-            "10": {
-                title: "Damar Residence, Kinarut", location: "Kinarut, Sabah", price: "RM 500 Booking", beds: "2", baths: "2", land: "N/A", built: "840",
-                type: "Condominium for Sale", furnishing: "Unfurnished", tenure: "Freehold (Non-Bumi)", status: "Expected Completion 2027", promo: "Military Debt Settlement Assitance",
-                img: "photo_2026-07-31_15-41-30.jpg", mapLink: "https://g.co/kgs/W748B2",
-                tagline: "High-Rise Living in Kinarut",
-                desc: "High-rise residential condominium located in Kinarut, Sabah, offering accessible seaside and city connectivity.<br><br><strong>Highlights:</strong><br>• 800m to Lok Kawi Recreational Park<br>• 4.5 km to Lok Kawi Army Camp<br>• 7.1 km to Putatan Town<br>• 12.5 km to KKIA<br>• 18.3 km to Kota Kinabalu City Centre"
-            },
-            "11": {
-                title: "Taman Bunga Tanjung", location: "Mahang, Kulim, Kedah", price: "RM 230,900", beds: "3", baths: "2", land: "N/A", built: "1,200",
-                type: "Single-Storey Terrace", furnishing: "Fully Tiled", tenure: "Freehold (Malay Reserve)", status: "SOLD OUT", promo: "SOLD OUT",
-                img: "photo_2026-07-31_15-51-54.jpg", mapLink: "https://maps.app.goo.gl/AFjaa5ytM6a5kK8w6",
-                tagline: "Fully Tiled Terrace with 2-Car Porch",
-                desc: "Single-Storey Terrace Houses located in Mahang, Kulim, Kedah with fully tiled interiors (16-inch tiles), asbestos-free ceiling, aluminium sliding doors, and a spacious 2-car porch.<br><br><strong>Location:</strong><br>• Shops within neighborhood<br>• 1 min to SMK Mahang & ADTEC<br>• 3 mins to Mahang Town & SK Mahang<br>• 30 km to Kulim Hi-Tech Park"
-            },
-            "12": {
-                title: "Apartment Flora Hijauan", location: "Taman Melati, Gombak KL", price: "RM 319,900", beds: "3", baths: "2", land: "N/A", built: "819",
-                type: "Apartment / Condo", furnishing: "Unfurnished", tenure: "Freehold (Malay Reserve)", status: "SOLD OUT", promo: "SOLD OUT",
-                img: "Residensi flora hijauan is new condo in taman melati Gombak.jpg", mapLink: "#",
-                tagline: "Turkish-Inspired Architectural Living",
-                desc: "Turkish-inspired architectural apartment located in Taman Melati, Gombak, Kuala Lumpur. Features Swimming Pool, Gym, Surau, Pavilion, and 2-Tier Security.<br><br><strong>Location:</strong><br>• 7 mins walk to ECRL TBG & LRT Gombak<br>• 5 mins to KL East Mall<br>• 8 mins to IIUM/UIA<br>• 9 mins to Columbia Asia Hospital<br>• 20 mins to KLCC"
-            }
-        };
-
-        // Extract ID from URL (Default to 1 if no ID is found)
-        const urlParams = new URLSearchParams(window.location.search);
-        const propId = urlParams.get('id') || "1";
-        const prop = properties[propId];
-
-        // Inject Data into HTML
-        if (prop) {
-            document.title = prop.title + " - JNR Capital";
-            document.getElementById('p-title').textContent = prop.title;
-            document.getElementById('p-location').textContent = prop.location;
-            document.getElementById('p-price').textContent = prop.price;
-            document.getElementById('p-beds').textContent = prop.beds;
-            document.getElementById('p-baths').textContent = prop.baths;
-            document.getElementById('p-land').textContent = prop.land;
-            document.getElementById('p-built').textContent = prop.built;
-            document.getElementById('p-type').textContent = prop.type;
-            document.getElementById('p-furnishing').textContent = prop.furnishing;
-            document.getElementById('p-tenure').textContent = prop.tenure;
-            document.getElementById('p-status').textContent = prop.status;
-            document.getElementById('p-promo').textContent = prop.promo;
-            document.getElementById('p-image').src = prop.img;
-            document.getElementById('p-maplink').href = prop.mapLink;
-            document.getElementById('p-tagline').textContent = prop.tagline;
-            document.getElementById('p-desc').innerHTML = prop.desc;
-        }
-    </script>
 </body>
 </html>
