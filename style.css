@@ -97,6 +97,12 @@ img {
   color: var(--text-muted);
 }
 
+.lang-switch i {
+  font-size: 1.1rem;
+  color: var(--jnr-blue);
+  margin-right: 2px;
+}
+
 .lang-switch a {
   font-size: 0.95rem;
   color: var(--text-dark);
@@ -791,7 +797,7 @@ img {
 }
 
 .btn-outline:hover {
-  background-color: var(--bg-light);
+  background: var(--bg-light);
 }
 
 .agent-disclaimer {
